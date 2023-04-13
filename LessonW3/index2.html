@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Document</title>
+        <!--A favicon is a small image displayed next to the page title in the browser tab. We have to add Link add in HTML file after title tag in head section.-->
+        <!--This is a Favicon-->
+        <link rel="icon" type="image/x-icon" href="img/images.png">
+    </head>
+
+    <body>
+
+        <!--HTML Iframes : An HTML iframe is used to display a web page within a web page.-->
+        <iframe src="https://github.com/shahalam22" title="Iframe in HTML" name="iframe_a" style="border: none;" height="200" width="300"></iframe>
+        
+        <p><a href="https://www.w3schools.com" target="iframe_a">W3schools.com</a></p>
+
+        <!--The HTML <script> tag is used to define a client-side script (JavaScript). 
+            The <script> element either contains script statements, or it points to an external script file through the src attribute.-->
+        
+        <!--Example 1-->
+        <button type="button" onclick="myFunction()">Click Me!</button>
+
+        <p id="demo">This is a demonstration.</p>
+                
+        <script>
+            function myFunction() { 
+                document.getElementById("demo").innerHTML = "Hello JavaScript!";
+                document.getElementById("demo").style.fontSize = "25px";
+                document.getElementById("demo").style.color = "red";
+                document.getElementById("demo").style.backgroundColor = "yellow";
+            }
+        </script>
+
+        <br><br>
+
+        <!--Example 2-->
+        <script>
+            function light(sw){
+                var pic;
+                if(sw==0){
+                    pic = "img/pic_bulboff.gif"
+                } else{
+                    pic = "img/pic_bulbon.gif"
+                }
+                document.getElementById('myImage').src = pic;
+            }
+        </script>
+
+        <img src="img/pic_bulboff.gif" id="myImage" width="100" height="180">
+
+        <p>
+            <button type="butoon" onclick="light(1)">Light on</button>
+            <button type="butoon" onclick="light(0)">Light off</button>
+        </p>
+
+        <!--The HTML <noscript> tag defines an alternate content to be displayed to users that have disabled scripts in their browser or have a browser that doesn't support scripts-->
+        <noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+        <!--FILE PATH : A file path describes the location of a file in a web site's folder structure.-->
+        <!--1. Absolute File path (direct link), 2. Relative File path (A relative file path points to a file relative to the current page.)-->
+        <!--
+            <img src="picture.jpg">         :-	The "picture.jpg" file is located in the same folder as the current page
+            <img src="images/picture.jpg">  :-	The "picture.jpg" file is located in the images folder in the current folder
+            <img src="/images/picture.jpg"> :-	The "picture.jpg" file is located in the images folder at the root of the current web
+            <img src="../picture.jpg">      :-	The "picture.jpg" file is located in the folder one level up from the current folder
+        -->
+
+
+        <!--HTML metadata is data about the HTML document. Metadata is not displayed. Metadata typically define the document title, character set, styles, scripts, and other meta information.-->
+        <!--
+            Define the character set used           :   <meta charset="UTF-8">
+            Define keywords for search engines      :   <meta name="keywords" content="HTML, CSS, JavaScript">
+            Define a description of your web page   :   <meta name="description" content="Free Web tutorials">
+            Define the author of a page             :   <meta name="author" content="John Doe">
+            Refresh document every 30 seconds       :   <meta http-equiv="refresh" content="30">
+            Setting the viewport to make your website look good on all devices  :
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        -->
+
+        <!--BASE tag : The <base> element specifies the base URL and/or target for all relative URLs in a page.-->
+        <!--Declaration of base tag : <base href="https://www.w3schools.com/" target="_blank">-->
+
+        <!--HTML Layout Elements-->
+        <!--img/img_sem_elements.jpg-->
+        <!--
+            <header> - Defines a header for a document or a section
+            <nav> - Defines a set of navigation links
+            <section> - Defines a section in a document
+            <article> - Defines an independent, self-contained content
+            <aside> - Defines content aside from the content (like a sidebar)
+            <footer> - Defines a footer for a document or a section
+            <details> - Defines additional details that the user can open and close on demand
+            <summary> - Defines a heading for the <details> element
+        -->
+
+    </body>
+</html>
