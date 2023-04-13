@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html lang="8">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="author" content="Dave Gray">
+        <meta name="description" content="This page containts all the things I am learning how to create as I learn HTML.">
+        <title>My First WEB PAGE</title>
+        <link rel="icon" href="html5.png" type="image/x-icon">
+
+    </head>
+
+    <body>
+        <header>
+            <h1>Hello World</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#html">Learn HTML</a>
+                    </li>
+                    <li>
+                        <a href="#vacation">Planning a Vacation</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact Me</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <hr>
+
+        <main>
+
+            <article id="html">
+
+                <h2>I'm ready to learn html</h2>
+                <p>This is my first web page</p>
+
+                <section>
+                    <p>This is first image.</p>
+                    <img src="img/nature1.jpg" alt="natural beauty" title="I am visiting maxico." width="300" height="200">
+                </section>
+
+                <section>
+                    <h3>My daily scadual</h3>
+                    <p>Let me tell you how :
+                            <br> &nbsp;&nbsp;&nbsp; ...I learn more about web dev.
+                            <br> &nbsp;&nbsp;&nbsp; ...I plan out my scedual.
+                            <br> &nbsp;&nbsp;&nbsp; ...I use resources from <abbr title="Mozila Network Developer"> <a href="https://developer.mozilla.org/en-US/">MDN</a> </abbr>.
+                    </p>
+
+                    <h3>My daily scadual (using list)</h3>
+                    <p>Let me tell you how :</p>
+                    <ol type="1">
+                        <li> ...I learn more about web dev.</li>
+                        <li> ...I plan out my scedual.</li>
+                        <li> ...I use resources from 
+                            <abbr title="Mozila Network Developer"> <a href="https://developer.mozilla.org/en-US/">MDN</a> </abbr>.
+                        </li>
+                    </ol>
+                    <aside>
+                        <details>
+                            <summary>Guess the <mark>number of hours</mark> I code per day.</summary>
+                            <p>I started at <time datetime="08:00"> 8 am</time> and write code for <time datetime="PT3H"> 3 hours</time> every morning.</p>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                                Deserunt nobis praesentium repellat in nostrum deleniti 
+                                quasi nemo ut. Hic, nesciunt autem! Beatae, tenetur 
+                                consequuntur soluta eaque nobis doloribus quo natus.
+                            Sunt, accusantium eos officiis molestias quasi corrupti 
+                            dolore quas et maiores consequuntur est assumenda provident 
+                            vitae hic quae? Deserunt soluta possimus a suscipit mollitia 
+                            quasi perferendis iusto eius tempora voluptatibus.</p>
+                        </details>
+                    </aside>
+
+                    <br>
+
+                    <p>This is table :</p>
+
+                    <table border="1px solid black">
+
+                        <caption>My daily scadual</caption>
+
+                        <thead>
+                            <tr>
+                                <th scope="col">&nbsp;</th>
+                                <th scope="col">Time</th>
+                                <th scope="col">Activity</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <th scope="row">Morning</th>
+                                <td>
+                                    <time datetime="08:00">8am</time>-<time datetime="11:00">11am</time>
+                                </td>
+                                <td>Write Code</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Noon</th>
+                                <td>
+                                    <time datetime="11:00">11am</time>-<time datetime="12:00">12am</time>
+                                </td>
+                                <td>Eat Lunch</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Afternoon</th>
+                                <td>
+                                    <time datetime="12:00">12am</time>-<time datetime="17:00">5pm</time>
+                                </td>
+                                <td>Study for other courses.</td>
+                            </tr>
+
+                            <!--using callspan-->
+                            <tr>
+                                <th scope="row">Evening</th>
+                                <td colspan="2">Free Time</td>
+                            </tr>
+
+                            <!--using rowspan-->
+                            <tr>
+                                <th scope="row">Break</th>
+                                <td rowspan="2">All other times</td>
+                                <td>Playing</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Night</th>
+                                <td>Sleep</td>
+                            </tr>
+                        </tbody>
+
+                        <tfoot>
+                            <tr>
+                                <td colspan="3">And that's what I do everyday, 5 days a week. Just eat, sleep, code ...and recharge!</td>
+                            </tr>
+                        </tfoot>
+
+                    </table>
+
+                </section>
+            </article>
+
+            <hr>
+
+            <article id="vacation">
+
+                <h2>I am also planning a vacation</h2>
+                <p>I've been working hard and <em> really need a gateway </em>.</p>
+                <p>I live ib <abbr title="kensas">KS</abbr> so I want visit a beach.</p>
+                
+
+                <section>
+                    <h3>Places I like to visit</h3>
+                    <p>I've heard good things about the caribbean.</p>
+                    <p>I've heard good things about going here:</p>
+                    <address>
+                        MargaritaVilla Island Reserve Riviera Cancun <br>
+                        Bahila Petempich Puerto Morelos, Mexico <br>
+                        Colonia Morelos, Mexico 77580
+                    </address>
+
+                    <h3>Places I like to visit (using list)</h3>
+                    <ul type="square">
+                        <li>
+                            <p>I've heard good things about the caribbean.</p>
+                            <!--loading parameter er 2 ta value hote pare 1. 
+                                eager 2. lazy. Eager ta by default thake. 
+                                Etar mane holo page jokhon load hobe tokhon
+                                ei image load hobe. Lazy er mane holo webpage 
+                                jokhon load hobe tokhon image load hobe na. 
+                                Amra webpage load howar por scroll kore joto 
+                                image er kachakachi ashbo oi muhurte image load 
+                                hobe. Er main shubidha holo lazy dile website 
+                                fast load hoy-->
+                            <figure>
+                                <img src="img/nature3.jpg" alt="natural beauty" title="I'll be there by 2025." width="300" loading="lazy">
+                                <figcaption>
+                                    This is a cool arora near beach.
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li><p>I've heard good things about going here:</p>
+                            <address>
+                                MargaritaVilla Island Reserve Riviera Cancun <br>
+                                Bahila Petempich Puerto Morelos, Mexico <br>
+                                Colonia Morelos, Mexico 77580
+                            </address>
+
+                            <figure>
+                                    <img src="img/nature5.jpg" alt="natural beauty" title="This is an absolute beauty" width="300" loading="lazy">
+                                <figcaption>
+                                    A caribbean vacation image
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </section>
+
+                <!--TODO: add more places-->
+                <section>
+                    <h3>Places I like to avoid</h3>
+                    <p>Anywhere cold. <strong> No way!! </strong> </p>
+                    <br>
+                    <dl>
+                        <dt>North Pole</dt>
+                        <dd>I hear this is <strong>cold</strong>!</dd>
+                        <dt>South Pole</dt>
+                        <dd>This is also cold.</dd>
+                        <dt>Mountain tops</dt>
+                        <dd>These are also cold.</dd>
+                    </dl>
+                </section>
+            </article>
+
+            <hr>
+
+            <article id="contact">
+                <h2>Contact ME</h2>
+                <p>I'd really like ti hear from you</p>
+
+                <form action="https://httpbin.org/get" method="get">
+                    <fieldset>
+                        <legend>Personal Info</legend>
+                        <p>
+                            <label for="firstName">First Name:</label>
+                            <input type="text" name="firstName" id="firstName" placeholder="i.e. Shah alam" autocomplete="on" required autofocus>
+                            <!--here "required" says that is this field is must be filled or not. Here "autofocus" means that 
+                                cursor will blink in that field asap the page loads and could simply start typing on that field.
+                                only one field can have autofocus.-->
+                        </p>
+                        <p>
+                            <label for="lastName">Last Name:</label>
+                            <input type="text" name="lastName" id="lastName" placeholder="i.e. Abir" autocomplete="on" required>
+                        </p>
+                        <p>
+                            <label for="password">Password:</label>
+                            <input type="password" name="password" id="password" placeholder="*******" autocomplete="on" required>
+                        </p>
+                        <p>
+                            <label for="phone">Phone:</label>
+                            <input type="tel" name="phone" id="phone" placeholder="555-555-5555" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                        </p>
+                        <p>
+                            <label for="decade">Favorite:</label>
+                            <input type="number" name="decade" id="decade" min="1950" max="2020" step="10" value="1980">
+                        </p>
+
+                        <!--form including options-->
+                        <P>
+                            <label for="coffee">Favorite:</label>
+                            <select name="coffee" id="coffee">
+                                <optgroup label="Coffees">
+                                    <option value="regular coffee">Regular Coffee</option>
+                                    <option value="iced coffee">Iced Coffee</option>
+                                </optgroup>
+                                <optgroup label="Espresso Drinks">
+                                    <option value="latte" selected>Latte</option>
+                                    <!-- we used "selected attribute here to make this default option-->
+                                    <option value="cappuccino">Cappuccino</option>
+                                    <option value="cortado">Cortado</option>
+                                    <option value="americano">Americno</option>
+                                </optgroup>
+                            </select>
+                        </P>
+
+                        <!-- second way to define option list -->
+                        <!-- <P>
+                            <label for="coffee">Favorite:</label>
+                            <input type="text" name="coffee" id="coffee" list="coffee-list">
+                            <datalist id="coffee-list">
+                                <option value="regular coffee">
+                                <option value="iced coffee">
+                                <option value="latte">
+                                <option value="cappuccino">
+                                <option value="cortado">
+                                <option value="americano">
+                            </datalist>
+                        </P> -->
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <legend>What's your favorite food?</legend>
+                        <p>
+                            <input type="radio" name="food" id="tacos" value="tacos">
+                            <label for="tacos">Tacos</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="food" id="pizza" value="pizza">
+                            <label for="pizza">Pizza</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="food" id="others" value="others">
+                            <label for="others">Others</label>
+                        </p>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <legend>Do you have any pets?</legend>
+                        <p>
+                            <input type="checkbox" name="pets" id="dog" value="dog">
+                            <label for="dog">Dog</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="pets" id="cat" value="cat">
+                            <label for="cat">Cat</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="pets" id="fish" value="fish">
+                            <label for="fish">Fish</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="pets" id="otherpets" value="otherpets">
+                            <label for="otherpets">Other</label>
+                        </p>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <legend>Send me a note</legend>
+                        <label for="message">Your Message:</label>
+                        <br>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Type your message here..."></textarea>
+                    </fieldset>
+                    <br>
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </form>
+            </article>
+
+        </main>
+
+        <footer>
+            <hr>
+            &lt;&lt;&lt; &copy; <a href="about.html" target="_blank">Shah Alam</a> &gt;&gt;&gt;
+            <p><a href="#">Back to top</a></p>
+        </footer>
+    </body>
+
+</html>

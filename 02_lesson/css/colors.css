@@ -1,0 +1,14 @@
+body {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background: papayawhip;
+    color: black; /*this can be "color: rgb(x,y,z)" or "color: #xxyyzz" */
+}
+
+/*"coolors" is a website for picking up color from color palate*/
+/*there is a contrtast checker website "webAim"*/
+
+p {
+    color: rgba(0, 0, 0, 1); /*here a stands for "alpha" which denotes the tranperacy of the color*/
+}

@@ -1,0 +1,44 @@
+/*we should not directly declare or use absolute value of size like "font-size: 20px;". If we do so, then it will be implemented strictly. User modified size won't work here*/
+p {
+    font-size: 18px;
+}
+
+/*
+header {
+    width: 80%;
+}
+*/
+/*ekhane header er width 50% holo*/
+
+h1 {
+    border: 2px dashed red;
+    width: 50%;
+    font-size: 3rem;
+    padding: 0.5em;
+}
+
+/*ekhane abar header er width ager 50% er 50% hoyeche*/
+
+/*
+p {
+    font-size: 1rem; //rem mane holo browser e load howya page er default size [noormally 16px]
+}
+*/
+/*if we use "em" instead of "rem". Mind it that em = 2*rem*/
+
+.gray {
+    width: 50ch; /*here "ch" means prottek line e 40 ta kore inside + outside*/
+}
+
+main {
+    width: 50vw; /*here "vw" means view-width. mane screen er 50% e dekhabe*/
+    background-color: skyblue;
+    font-size: 2rem;
+}
+
+/*
+p {
+    font-size: 2rem;
+    width: 40ch;
+}
+*/

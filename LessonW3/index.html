@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h1 {
+            color: royalblue;
+        }
+        p {
+            color: brown;
+        }
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+    <!--A favicon is a small image displayed next to the page title in the browser tab. We have to add Link add in HTML file after title tag in head section.-->
+    <!--This is a Favicon-->
+    <link rel="icon" type="image/x-icon" href="img/images.png">
+</head>
+<body>
+    <h1 style="background-color: powderblue;">First Heading</h1>
+    <h2 style="color: rgb(253, 101, 74);">Second heading</h2>
+    <h3 style="font-family: verdana;">Third heading</h3>
+    <h4 style="font-family: courier;">Fourth heading</h4>
+    <h5 style="font-size: 300%;">Fifth heading</h5>
+    <h6 style="text-align: center;">Sixth heading</h6>
+
+    <a href="#cssBorder">Jump to Boxed para.</a>
+
+    <p style="color:red">First paragraph</p>
+    <p title="I'm a tooltip.">This is a paragraph.</p>
+
+    <hr>
+
+    <p>
+        This paragraph
+        contains     a lot of lines
+        int the source      code, 
+        but the      browser 
+        ignores it.
+    </p>
+
+    <hr>
+
+    <pre>
+        This paragraph
+        contains     a lot of lines
+        int the source      code, 
+        but the      browser 
+        ignores it.
+    </pre>
+
+    <hr>
+
+    <p><b>This is bold.</b></p>
+    <p><strong>This is Important!</strong></p>
+    <p><i>This text is italic</i></p>
+    <p><em>This text is emphasized</em></p>
+    <p><small>this is some smaller text</small></p>
+    <p>Do not forgot to buy <mark>milk</mark> today.</p>
+    <p>My favorite color is <del>blue</del> red.</p>
+    <p>My favorite color is <del>blue</del> <ins>red</ins></p>
+    <p>This is <sub>subscripted</sub> text.</p>
+    <p>This is <sup>superscripted</sup> text.</p>
+
+    <p>Here is a quote from WWF's website:</p>
+    <blockquote cite="http://www.worldwildlife.org/who/index.html">
+    For 60 years, WWF has worked to help people and nature thrive. As the world's leading conservation organization, WWF works in nearly 100 countries. At every level, we collaborate with people around the world to develop and deliver innovative solutions that protect communities, wildlife, and the places in which they live.
+    </blockquote>
+
+    <p>WWF's goal is to : <q>Build a future where people will live in harmony with nature.</q></p>
+
+    <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+
+    <address>
+        Written by John Doe. <br>
+        Visit us at: <br>
+        Example.com <br>
+        Box 564, DisneyLand <br>
+        USA <br>
+    </address>
+
+    <!-- <cite> tag defines the title of a creative works like books, poem, song, etc-->
+    <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>   
+
+    <bdo dir="rtl">This text will be written from rigth to left.</bdo>
+
+    <!--
+        here is many ways to define colors.
+        <h1 style="background-color:rgb(255, 99, 71);">...</h1>
+        <h1 style="background-color:#ff6347;">...</h1>
+        <h1 style="background-color:hsl(9, 100%, 64%);">...</h1>
+
+        <h1 style="background-color:rgba(255, 99, 71, 0.5);">...</h1>
+        <h1 style="background-color:hsla(9, 100%, 64%, 0.5);">...</h1>
+    -->
+
+    <h1 style="border: 2px solid violet;">Hello World</h1>
+
+    <!--
+        CSS can be added to HTML documents in 3 ways:
+        Inline - by using the style attribute inside HTML elements
+        Internal - by using a <style> element in the <head> section
+        External - by using a <link> element to link to an external CSS file
+        The most common way to add CSS, is to keep the styles in external CSS files.
+    -->
+
+    <p id="cssBorder">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo corrupti maxime exercitationem dolore, fuga perspiciatis quo mollitia voluptatum saepe illo. Modi similique laboriosam sunt dolorem iusto officiis fugit? Ex, quasi.
+    Soluta, vel voluptas totam quisquam obcaecati eius amet architecto dolorum possimus sit. Aspernatur cumque dolor placeat alias eos nemo, vel, fuga velit temporibus, voluptates iusto fugiat aliquam quo magnam error.
+    Esse unde explicabo maxime. Velit laudantium officiis minus, nam soluta quos porro alias vero excepturi quibusdam error rem, reiciendis nulla distinctio incidunt fugiat ipsa architecto iure laboriosam sed magni cupiditate.</p>
+
+    <!--
+        The target attribute can have one of the following values:
+        _self - Default. Opens the document in the same window/tab as it was clicked
+        _blank - Opens the document in a new window or tab
+        _parent - Opens the document in the parent frame
+        _top - Opens the document in the full body of the window
+    -->
+    <!--
+        There could be 2 types of URL. 1. Absolute URL, 2. Relative URL
+        <h2>Absolute URLs</h2>
+        <p><a href="https://www.w3.org/">W3C</a></p>
+        <p><a href="https://www.google.com/">Google</a></p>
+
+        <h2>Relative URLs</h2>
+        <p><a href="html_images.asp">HTML Images</a></p>
+        <p><a href="/css/default.asp">CSS Tutorial</a></p>
+    -->
+
+    <a href="https://www.w3schools.com" title="Go to W3Schools HTML section">This is a link</a>
+    <br><br>
+
+    <!--Using Image as a link-->
+    <p>This is a image with link</p>
+    <a href="default.asp">
+        <img src="img/mac.jpg" alt="Computer" style="width:440px;height:320px;">
+    </a>
+    <br><br>
+
+    <!--Using mail adress as a link-->
+    <a href="mailto:someone@example.com">Send email</a>
+    <br><br>
+
+    <!--Usinng Button as link-->
+    <button onclick="document.location='defaulte.asp'">HTML Tutorial</button>
+    <br><br>
+
+    <!--Making clickable area inside image-->
+    <!--https://www.w3schools.com/html/html_images_imagemap.asp-->
+    <p>Here Computer, phone, Cup is individually clickable inside photo. It's been working as individual link.</p>
+    <img src="http://127.0.0.1:5500/img/workplace.jpg" alt="workspace" usemap="#workmap">
+    <map name="workmap">
+        <area shape="rect" coords="34,44,270,350" alt="Computer" href="https://www.w3schools.com/html/computer.htm">
+        <area shape="rect" coords="290,172,333,250" alt="Phone" href="https://www.w3schools.com/html/phone.htm">
+        <area shape="circle" coords="337,300,44" alt="Coffee" href="https://www.w3schools.com/html/coffee.htm">
+    </map>
+
+    <br>
+    <p>Reponsive image viewing through picture tag</p>
+    <!--This <picture> tag allow us to set responsive image.-->
+    <picture>
+        <!--We have to sequence image according to precedence. Because, browser will load first image it could recognize.-->
+        <source media="(min-width: 650px)" srcset="img/img_food.jpg">
+        <source media="(min-width: 465px)" srcset="img/img_girl.jpg">
+        <img src="img/img_girl.jpg" style="width: auto;">
+    </picture>
+
+    <hr>
+    <br><br>
+
+    <a href="#">Back to Top</a>
+
+</body>
+</html>

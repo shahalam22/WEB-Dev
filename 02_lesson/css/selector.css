@@ -1,0 +1,39 @@
+* {
+    font-family: monospace;
+}
+/* a, b thakle (css e) mane a ebong b tag er jara jara ache tader upor
+apply hobe. a b deya thakle bhujhay a er betor jodi b thake tahole
+oi b te just implement hobe.*/
+/*we can use "*" to select all the things of index to make a change in style*/
+
+body {
+    font-size: 18px;
+    border: 3px solid black;
+}
+
+h1, h2 {
+    color: blue;
+}
+
+p {
+    color: purple!important;
+    /*this "important" flag precedes every "p" declared later.
+    ei flag na dile porer "p" er jonno color red hoye jeto*/
+}
+
+p {
+    color: red;
+}
+
+p span {
+    text-transform: uppercase;
+    background: gold;
+}
+
+.gray {
+    color: gray;
+}
+
+#second {
+    font-style: italic;
+}

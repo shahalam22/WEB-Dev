@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/boxModel.css">
+    <!--precedence of css is inline > internal or external. If internal declared after external then internal > external. We should hardly use inline css.-->
+    <!-- INTERNAL CSS [we should always use external css]
+        <style>
+        p {
+            color: limegreen;
+        }
+        </style> 
+    -->
+</head>
+<body>
+    <header>
+        <h1>CSS Selectors</h1>
+    </header>
+    <article>
+        <h2>Article 1</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas <span>vero</span> aspernatur, atque aliquid facilis repudiandae at dicta consequatur similique. Dolorum, ex nulla? Id laboriosam suscipit dolore! Voluptatem iure perferendis pariatur.</p>
+    </article>
+    <article>
+        <h2>Article 2</h2>
+        <p class="gray" id="second">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas vero aspernatur, atque aliquid facilis repudiandae at dicta consequatur similique. Dolorum, ex nulla? Id laboriosam suscipit dolore! Voluptatem iure perferendis pariatur.</p>
+    </article>
+    <article>
+        <h2>Article 3</h2>
+        <p class="gray">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas <span>vero</span> aspernatur, atque aliquid facilis repudiandae at dicta consequatur similique. Dolorum, ex nulla? Id laboriosam suscipit dolore! Voluptatem iure perferendis pariatur.</p>
+    </article>
+
+    <div class="circle"></div> <!--making an circle from div using just css-->
+
+    </body>
+</html>

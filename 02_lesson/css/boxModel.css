@@ -1,0 +1,42 @@
+/*in box model most inner part holo content -> padding -> border -> margin*/
+/*margin depends over "font-size"*/
+/*box er width er calculation e content + padding + border ashbe but margin ashbe na*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*ekhane border-box  deyay border box calculation e content er sathe padding & border include hoise. else just content ei thakto ei calculation e*/
+}
+
+header {
+    border: 2px dashed red;  /*ekhane border er "dashed" er poriborte "double" / "outset"*/
+    width: 400px;
+    font-size: 1.5rem;
+    padding: 1.5em;
+    /*there is 2 ways to define the sides of margin/padding/border */
+    /*
+    --way 1--
+    margin-top: 1.5 em;
+    margin-rigth: 2 em;
+    margin-bottom: 2em;
+    margin-rigth: 2em;
+
+    --way 2--
+    margin: 1.5em 2em 2em 2em (top rigth bottom left);
+
+    ekhane a b = top & bottom, rigth & left;
+    */
+    outline: 3px solid purple; /*ekhane outline holo border er upore thaka cover*/
+    outline-offset: 5px; /*this means that border 5px dure outline toiri hobe. eta + hole border er bahire outline toiri hobe. ar - hole border er vetore outline toiri hobe*/
+}
+
+.circle {
+    margin: 3rem auto; /* 'auto' autometically defines position of the content inside "div" tag*/
+    background-color: gold;
+    width: 100px;
+    height: 100px;
+    border: 2px splid black;
+    border-radius: 50px;
+    outline: 2px solid red;
+    outline-offset: 0.25rem;
+}
