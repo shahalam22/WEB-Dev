@@ -3,8 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!--This is the tag for making website responsive-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/media.css">
         <title>Document</title>
         <!--A favicon is a small image displayed next to the page title in the browser tab. We have to add Link add in HTML file after title tag in head section.-->
         <!--This is a Favicon-->
@@ -96,6 +98,105 @@
             <details> - Defines additional details that the user can open and close on demand
             <summary> - Defines a heading for the <details> element
         -->
+
+        <!--Makeing of a responsive text-->
+        <h1 style="font-size: 10vw;">Hello World!</h1>
+
+        <!--Responsive Design-->
+        <h2>Media Queries</h2>
+        <p>Resize the browser window.</p>
+
+        <p>Make sure you reach the breakpoint at 800px when resizing this frame.</p>
+
+        <div class="left">
+            <p>Left Menu</p>
+        </div>
+
+        <div class="main">
+            <p>Main Content</p>
+        </div>
+
+        <div class="right">
+            <p>Right Content</p>
+        </div>
+
+        <hr>
+        <br>
+
+        <!--Writing computer code-->
+        <pre>
+            <code>
+                x = 5;
+                y = 6;
+                z = x + y;
+            </code>
+        </pre>
+
+        <hr>
+
+        <!--Keyboard key showing tag-->
+        <P>Save your document by pressing <kbd style="background-color: blue;">Ctrl + S</kbd>.</P>
+        <br>
+
+        <!--This "samp" tag is used to define sample output from a computer program.-->
+        <p>Message from my computer</p>
+        <p><samp>File not found.<br>Press F1 to continue.</samp></p>
+        <br>
+
+        <!--The HTML <var> element  is used to define a variable in programming or in a mathematical expression. 
+            The content inside is typically displayed in italic.-->
+        <p>The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> is the base, and <var>h</var> is the vertical height.</p>
+        <br>
+
+        <!--
+            A semantic element clearly describes its meaning to both 
+            the browser and the developer.
+            Examples of non-semantic elements: <div> and <span> 
+            - Tells nothing about its content.
+            Examples of semantic elements: <form>, <table>, and <article> 
+            - Clearly defines its content.
+        -->
+
+        <!--The <section> element defines a section in a document. 1. Chapters, 2. Introduction, 3. News items, 4. Contact information-->
+        <!--The <article> element specifies independent, self-contained content. 1. Forum posts, 2. Blog posts, 3. User comments, 4. Product cards, 5. Newspaper articles-->
+        <!--The <header> element represents a container for introductory content or a set of navigational links. one or more heading elements (<h1> - <h6>), 2. logo or icon, 3. authorship information-->
+        <!--The <footer> element defines a footer for a document or section. 1. authorship information, 2. copyright information, 3. contact information, 4. sitemap, 5. back to top links, 6. related documents-->
+        <!--The <nav> element defines a set of navigation links.-->
+        <nav style="float: left;">
+            <a href="/html/">HTML</a> |
+            <a href="/css/">CSS</a> |
+            <a href="/js/">JavaScript</a> |
+            <a href="/jquery/">jQuery</a>
+        </nav>
+        <br>
+
+        <!--The <aside> element defines some content aside from the content it is placed in (like a sidebar).-->
+        <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+        <aside>
+            <h4>Epcot Center</h4>
+            <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+        </aside>
+        <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+        <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga ut accusantium vel, molestiae molestias praesentium illum incidunt atque rerum, odio mollitia quos explicabo accusamus! Neque officia exercitationem in sequi iure?
+        Voluptate laboriosam explicabo similique aperiam optio sequi animi veritatis, ullam adipisci, beatae debitis, asperiores quod qui sapiente iure id unde ab? Placeat aperiam accusamus perspiciatis inventore consequuntur iste at repellendus!</p>
+
+        <!--The <figure> tag specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.-->
+        <figure>
+            <img src="img/workplace.jpg" alt="Workspace">
+            <figcaption>Fig-1: This is my new workspace</figcaption>
+        </figure>
+
+        <!--Details:Summary tag-->
+        <details>
+            <summary>Here is all about our yearly goal</summary>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident dicta, aliquid atque necessitatibus dolorum beatae quisquam obcaecati ex? Iste impedit reiciendis suscipit porro alias ex cupiditate? Assumenda, quis hic!</p>
+        </details>
+
+        <p>Here is some entities of HTML which we cant't declare normally.</p>
+        <p>&nbsp; &lt; &gt; &amp; &quot; &apos; &cent; &pound; &yen; &euro; &copy; &reg;</p>
+        <p>Here is a link of special symbol's code get used in HTML page : https://www.w3schools.com/html/html_symbols.asp</p>
+        <p>Here is a link of special emoji's code get used in HTML page : https://www.w3schools.com/html/html_emojis.asp</p>
 
     </body>
 </html>
