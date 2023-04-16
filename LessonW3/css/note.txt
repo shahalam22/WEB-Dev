@@ -1,0 +1,60 @@
+* CSS SYNTAX : selector {property:value; property:value;}
+
+* The selector points to the HTML element you want to style
+
+* We can divide CSS selectors into five categories:
+    - Simple selectors (select elements based on name, id, class)
+    - Combinator selectors (select elements based on a specific relationship between them)
+        link : https://www.w3schools.com/css/css_combinators.asp
+    - Pseudo-class selectors (select elements based on a certain state)
+        link : https://www.w3schools.com/css/css_pseudo_classes.asp     
+    - Pseudo-elements selectors (select and style a part of an element)
+        link : https://www.w3schools.com/css/css_pseudo_elements.asp
+    - Attribute selectors (select elements based on an attribute or attribute value)
+        link : https://www.w3schools.com/css/css_attribute_selectors.asp
+
+* The id selector uses the id attribute of an HTML element to select a specific element. To select an element with a specific id, write a hash (#) character, followed by the id of the element.
+* The class selector selects HTML elements with a specific class attribute. To select elements with a specific class, write a period (.) character, followed by the class name.
+* A class name cannot start with a number!
+* In this example the <p> element will be styled according to class="center" and to class="large": <p class="center large">This paragraph refers to two classes.</p>
+* "*" is the CSS universal selector
+* h1 {                  p {
+        fkjlaksj;           jkhklanak;
+        ashfkjald;          skjfsfskfn;
+    }                      }
+
+    here this css style will be applied in all the <h1> or <p> tags. So, this is called CSS group selector
+
+*   h1 {
+        text-align: center;
+        color: red;
+    }
+
+    h2 {
+        text-align: center;
+        color: red;
+    }
+
+    p {
+        text-align: center;
+        color: red;
+    }
+     
+    this can be written like : 
+
+    h1, h2, p {
+            text-align: center;
+            color: red;
+    }
+
+* There are three ways of inserting a style sheet:
+        External CSS - alada css file khule otate style kore html file e link kora. precedence-*
+        Internal CSS - head er moddhe style tag diye style kora. precedence-**
+        Inline CSS - tag er moddhe style attribute use kore style kora. precedence-***
+
+* sometimes hexCode be 3 digit i.g. we can write #ffcc00 as #fc0
+
+
+
+
+
