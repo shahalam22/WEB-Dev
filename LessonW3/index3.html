@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!--This is the tag for making website responsive-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/media.css">
+        <title>Document</title>
+        <!--A favicon is a small image displayed next to the page title in the browser tab. We have to add Link add in HTML file after title tag in head section.-->
+        <!--This is a Favicon-->
+        <link rel="icon" type="image/x-icon" href="img/images.png">
+    </head>
+<body>
+    
+    <h1>We can add multimedia in our website also.</h1>
+    <p>Video in our html file</p>
+    <div>
+        <button onclick="playPause()">Play/Pause</button>
+        <button onclick="makeBig()">Big</button>
+        <button onclick="makeSmall()">Small</button>
+        <button onclick="makeNormal()">Normal</button>
+        <br><br>
+        <video id="video1" width="420" controls> <!--there is also some tag in the place of "controls" "autoplay", "autoplay muted"-->
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/ogg">
+            Your browser doesn't support the video tag
+        </video>
+    </div>
+
+    <script>
+        var myVideo = document.getElementById("video1");
+        function playPause(){
+            if(myVideo.paused) myVideo.play();
+            else myVideo.pause();
+        }
+        function makeBig(){
+            myVideo.width = 560;
+        }
+        function makeSmall(){
+            myVideo.width = 320;
+        }
+        function makeNormal(){
+            myVideo.width = 420;
+        }
+    </script>
+
+
+    <p>Audio in our HTML document</p>
+    <audio controls>
+        <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+        <source src="https://www.w3schools.com/html/horse.ogg" type="audio/mp3">
+        Your browser doesn't support the audio element.
+    </audio>
+
+
+    <!--The <object> element defines an embedded object within an HTML document.-->
+    <object width="100%" height="500px" data="snippet.html"></object>
+
+    <!--The <embed> element also defines an embedded object within an HTML document.-->
+    <embed width="100%" height="500px" src="snippet.html">
+
+    <!--both these tags are used for same reason.-->
+
+
+    <!--Showing youtube video in HTML document-->
+    <p>YOUTUBE videos in HTML document</p>
+    <!--<iframe src="https://www.youtube.com/watch?v=xanvTzLBH8Y" height="315" width="420"></iframe>-->
+    <!--ekhane amra directly emne link diye Youtube video ante pari na. Eijonno video er ID note kore "https://www.youtube.com/embed/video ID" iframe e dile video ta html document e chole ashbe.-->
+    <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+    <!--youtube video autoplay korte "https://www.youtube.com/embed/VIDEO ID?autoplay=1&mute=1"-->
+    <!--youtube er playlist chalu korte "https://www.youtube.com/embed/VIDEO ID?playlist=PLAYLIST ID&loop=X" ekhane X holo amra loop jotobar chalaite chai toto sonkha-->
+    <!--youtube video te control na dite chaile "https://www.youtube.com/embed/VIDEO ID?controls=0"-->
+
+</body>
+</html>
