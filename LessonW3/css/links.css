@@ -1,0 +1,57 @@
+#one {
+    color: hotpink;
+}
+
+/*all about a link*/
+/*link -> visited -> hover -> active   ===   this sequence must be followed*/
+.two:link {
+    color: red;
+    text-decoration: none;
+    background-color: yellow;
+    font-size: 150%;
+}
+
+.two:visited {
+    color: green;
+    text-decoration: none;
+    background-color: cyan;
+}
+
+.two:hover {
+    color: hotpink;
+    text-decoration: underline;
+    background-color: lightgreen;
+    font-family: monospace;
+}
+
+.two:active {
+    color: blue;
+    text-decoration: underline;
+    background-color: hotpink;
+}
+
+.three:link, .three:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+.three:hover, .three:active {
+    background-color: red;
+}
+
+.four:link, .four:visited {
+    background-color: white;
+    color: black;
+    border: 2px solid green;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+.four:hover, .four:active {
+    background-color: green;
+    color: white;
+}
