@@ -1,0 +1,117 @@
+.one {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.two {
+    font-family: Georgia, serif;
+}
+
+.three {
+    font-family: Garamond, serif;
+}
+
+.four {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.five {
+    font-family: Tahoma, Verdana, sans-serif;
+}
+
+.six {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.seven {
+    font-family: Geneva, Verdana, sans-serif;
+}
+
+.eight {
+    font-family: "Courier New", Courier, monospace;
+}
+
+.nine {
+    font-family: "Brush Script MT", cursive;
+}
+
+.ten {
+    font-family: Copperplate, Papyrus, fantasy;
+}
+
+/*font style property*/
+
+.normal {
+    font-style: normal;
+}
+.italic {
+    font-style: italic;
+}
+.oblique {
+    font-style: oblique;
+}
+
+/*font weight property*/
+
+.normW {
+    font-weight: normal;
+}
+.thickW {
+    font-weight: bold;
+}
+
+/*font varient property*/
+
+.normV {
+    font-variant: normal;
+}
+.smallV {
+    font-variant: small-caps;
+}
+
+/*all about font size*/
+
+.font1 {
+    font-size: 40px;
+}
+.font2 {
+    font-size: 30px;
+}
+.font3 {
+    font-size: 14px;
+}
+.font4 {
+    font-size: 2.5em;
+}
+.font5 {
+    font-size: 1.875em;
+}
+.font6 {
+    font-size: 0.875em;
+}
+
+.responsive {
+    font-size: 10vw;
+}
+
+/*If you do not want to use any of the standard fonts in HTML, you can use Google Fonts.*/
+/*Just add a special style sheet link in the <head> section and then refer to the font in the CSS.*/
+/*and the link is : <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=FAMILY_NAME"> */
+
+/*
+
+The shorthand notation for Font Property is ::: font: font-style[optional] font-varient[optional] font-weight[optional] font-size[required] font-family[required];
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
