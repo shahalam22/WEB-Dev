@@ -1,0 +1,47 @@
+ul.a {
+    list-style-type: circle;
+    list-style-position: inside;
+}
+  
+ul.b {
+    list-style-type: square;
+    list-style-position: outside;
+}
+  
+ul.img {
+    list-style-image: url('sqpurple.gif');
+}
+
+ol.c {
+    list-style-type: upper-roman;
+}
+  
+ol.d {
+    list-style-type: lower-alpha;
+}
+
+/*shorthand property ::: list-style: list-style-type list-style-position list-style-image*/
+
+/*styling inside the list*/
+ol {
+    background: #ff9999;
+    padding: 20px;
+}
+  
+ul {
+    background: #3399ff;
+    padding: 20px;
+}
+  
+ol li {
+    background: #ffe5e5;
+    color: darkred;
+    padding: 5px;
+    margin-left: 35px;
+}
+  
+ul li {
+    background: #cce5ff;
+    color: darkblue;
+    margin: 5px;
+}
