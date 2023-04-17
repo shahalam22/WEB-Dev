@@ -1,0 +1,81 @@
+h1 {
+    color: white;
+    background-color: black;
+}
+
+/*shorthand text-decoration property: text-decoration: line(required) color(optional) style(optional) thickness(optional)*/
+
+.exp1 {
+    text-align: left;
+    direction: rtl;
+    text-decoration-line: overline;
+    text-decoration-color: red;
+    text-decoration-style: solid; /*this value could be : solid, double, dotted, dashed, wavy*/
+    text-decoration-thickness: auto;
+    text-transform: lowercase;
+}
+.exp2 {
+    text-align: center;
+    direction: ltr;
+    unicode-bidi: bidi-override;
+    text-decoration-line: line-through;
+    text-decoration-color: blue;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 5px;
+    text-transform: uppercase;
+}
+.exp3 {
+    text-align: right;
+    text-decoration-line: underline;
+    text-decoration-color: green;
+    text-decoration-style: dashed;
+    text-decoration-thickness: 25%;
+    text-transform: capitalize;
+}
+.exp4 {
+    text-decoration-line: overline underline;
+    text-decoration-color: purple;
+    text-decoration-style: wavy;
+    text-decoration: none;
+}
+
+/* All links in HTML are underlined by default. Sometimes you see that links are styled with no underline. The text-decoration: none; is used to remove the underline from links.*/
+
+/*vertical alignment*/
+img.a {
+    vertical-align: baseline;
+}
+img.b {
+    vertical-align: text-top;
+}
+img.c {
+    vertical-align: text-bottom;
+}
+img.d {
+    vertical-align: sub;
+}
+img.e {
+    vertical-align: super;
+}
+
+/*text decoration*/
+.exp5 {
+    text-indent: 50px;
+    letter-spacing: 5px;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF; /*here shadow will be the combination of both style*/
+}
+.exp6 {
+    letter-spacing: -2px;
+    white-space: nowrap;
+    text-shadow: 0 0 3px #f00; /*here will be no horizontal & vertical shadow.*/
+}
+.exp7 {
+    line-height: 0.8;
+    word-spacing: 10px;
+    text-shadow: 2px 2px 5px red; /*there will be blur shadow*/
+}
+.exp8 {
+    line-height: 1.8;
+    word-spacing: -2px;
+    text-shadow: 2px 2px red;
+}
