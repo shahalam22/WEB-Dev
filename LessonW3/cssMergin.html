@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p.one {
+            border: 1px solid black;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            margin-right: 150px;
+            margin-left: 80px;
+            background-color: lightblue;
+            /*padding style*/
+            padding-top: 50px;
+            padding-right: 30px;
+            padding-bottom: 50px;
+            padding-left: 80px;
+        }
+        p.two {
+            border: 1px solid black;
+            margin: 25px 50px 75px 100px;
+            padding: 25px 50px 75px 100px;
+            background-color: lightblue;
+        }
+        p.three {
+            border: 1px solid black;
+            margin: 25px 50px 75px;
+            padding: 25px 50px 75px;
+            background-color: lightblue;
+        }
+        p.four {
+            border: 1px solid black;
+            margin: 25px 50px;
+            padding: 25px 50px;
+            background-color: lightblue;
+        } 
+        p.five {
+            border: 1px solid black;
+            margin: 25px;
+            padding: 25px;
+            background-color: lightblue;
+        }
+        p.six {
+            width: 300px;
+            margin: auto;
+            padding: 25px;
+            border: 1px solid red;
+        }
+        div {
+            border: 1px solid red;
+            margin-left: 100px;
+        }
+        p.ex1 {
+            margin-left: inherit;
+        }
+        h5 {
+            margin: 0 0 50px 0;
+        }
+        h6 {
+            margin: 20px 0 0 0;
+        }
+
+        .heightwidth1 {
+            height: 200px;
+            width: 50%;
+            background-color: powderblue;
+        }
+        .heightwidth2 {
+            height: 200px;
+            width: 500px;
+            background-color: powderblue;
+        }
+        .heightwidth3 {
+            height: 200px;
+            max-width: 500px;
+            background-color: powderblue;
+        }
+        
+        .boxModel {
+            background-color: lightgrey;
+            width: 300px;
+            border: 15px solid green;
+            padding: 50px;
+            margin: 20px;
+        }
+
+        /*outline*/
+        /*outline-style*/
+        p {outline-color:red;}
+        p.dotted {outline-style: dotted;}
+        p.dashed {outline-style: dashed;}
+        p.solid {outline-style: solid;}
+        p.double {outline-style: double;}
+        p.groove {outline-style: groove;}
+        p.ridge {outline-style: ridge;}
+        p.inset {outline-style: inset;}
+        p.outset {outline-style: outset;}
+
+        /*outline-width*/
+        p.ex1 {
+            border: 1px solid black;
+            outline-style: solid;
+            outline-color: red;
+            outline-width: thin;
+        }
+        p.ex2 {
+            border: 1px solid black;
+            outline-style: solid;
+            outline-color: red;
+            outline-width: medium;
+        }
+        p.ex3 {
+            border: 1px solid black;
+            outline-style: solid;
+            outline-color: red;
+            outline-width: thick;
+        }
+        p.ex4 {
+            border: 1px solid black;
+            outline-style: solid;
+            outline-color: red;
+            outline-width: 4px;
+        }
+
+        /*outline offset example*/
+        p.offset {
+            margin: 30px;
+            background:yellow;
+            border: 1px solid black;
+            outline: 1px solid red;
+            outline-offset: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <!--Margins are used to create space around elements, outside of any defined borders.-->
+    <p class="one">A complete short story. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quasi ab doloremque inventore, hic optio ipsam magni, tenetur aliquam nostrum blanditiis repellat maiores quibusdam. Porro obcaecati unde nemo magnam excepturi.</p>
+    <hr>
+
+    <!--Margin shorthand property-->
+    <p class="two">A complete short story. Lorem ipsum dolor sit amet adipisicing elit. Repellat placeat recusandae fugiat sit eveniet, eum consequatur in perspiciatis qui ducimus aperiam. Consectetur architecto itaque, voluptatibus maiores placeat soluta obcaecati nemo?</p>
+    <hr>
+    <p class="three">A complete short story. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut eveniet numquam laudantium non placeat, magni maiores asperiores, totam quos possimus tempore tenetur voluptate tempora doloremque veniam aliquid aperiam distinctio cum!</p>
+    <hr>
+    <p class="four">A complete short story. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit eveniet minus nisi quae rem qui quod nesciunt distinctio hic, placeat ipsa, cumque doloribus facilis possimus magni? Non vero ex iure.</p>
+    <hr>
+    <p class="five">A complete short storys. Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, dolores atque? Animi aliquid vero illum voluptatem ex numquam quaerat atque, eveniet voluptas? Aut perferendis optio pariatur cumque? Recusandae, qui delectus.</p>
+    <hr>
+
+    <!--The auto value-->
+    <p class="six">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos temporibus asperiores saepe officiis exercitationem, at hic a. A, omnis inventore, alias quis aliquid, ipsum unde quasi vitae fugit quas esse.</p>
+    <hr>
+
+    <div>
+        <p class="ex1">This paragraph has an inherited left margin (from the div element).</p>
+    </div>
+
+    <br><br>
+    <h5>heading for pre</h5>
+    <h6>heading for post</h6>
+    <br><br>
+    
+    <!--height & width property-->
+    <div class="heightwidth1">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, ad magni? Laborum aliquam ab sequi hic quisquam incidunt quis, quidem obcaecati, sit nulla debitis, repudiandae minus quaerat dignissimos optio autem.</p>
+    </div>
+    <br>
+    <div class="heightwidth2">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, ad magni? Laborum aliquam ab sequi hic quisquam incidunt quis, quidem obcaecati, sit nulla debitis, repudiandae minus quaerat dignissimos optio autem.</p>
+    </div>
+    <br>
+    <!--
+        The problem with the <div> above occurs when the browser window is smaller than the width of the element (500px). The browser then adds a horizontal scrollbar to the page.
+        Using max-width instead, in this situation, will improve the browser's handling of small windows.
+    -->
+    <div class="heightwidth3">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, ad magni? Laborum aliquam ab sequi hic quisquam incidunt quis, quidem obcaecati, sit nulla debitis, repudiandae minus quaerat dignissimos optio autem.</p>
+    </div>
+    <br><br>
+    <div class="boxModel">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, ad magni? Laborum aliquam ab sequi hic quisquam incidunt quis, quidem obcaecati, sit nulla debitis, repudiandae minus quaerat dignissimos optio autem.</p>
+    </div>
+    <br><br>
+
+    <!--outline-->
+
+    <!--outline-style-->
+    <h2>The outline-style Property</h2>
+
+    <p class="dotted">A dotted outline</p>
+    <p class="dashed">A dashed outline</p>
+    <p class="solid">A solid outline</p>
+    <p class="double">A double outline</p>
+    <p class="groove">A groove outline. The effect depends on the outline-color value.</p>
+    <p class="ridge">A ridge outline. The effect depends on the outline-color value.</p>
+    <p class="inset">An inset outline. The effect depends on the outline-color value.</p>
+    <p class="outset">An outset outline. The effect depends on the outline-color value.</p>
+
+    <!--outline-width-->
+    <h2>The outline-width Property</h2>
+
+    <p class="ex1">A thin outline.</p>
+    <p class="ex2">A medium outline.</p>
+    <p class="ex3">A thick outline.</p>
+    <p class="ex4">A 4px thick outline.</p>
+
+    <!--outline-offset-->
+    <p class="offset">This paragraph has an outline of 15px outside the border edge.</p>
+
+</body>
+</html>

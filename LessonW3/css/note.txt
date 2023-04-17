@@ -54,6 +54,149 @@
 
 * sometimes hexCode be 3 digit i.g. we can write #ffcc00 as #fc0
 
+* The border-style property specifies what kind of border to display.
+    The following values are allowed:
+        dotted - Defines a dotted border
+        dashed - Defines a dashed border
+        solid - Defines a solid border
+        double - Defines a double border
+        groove - Defines a 3D grooved border. The effect depends on the border-color value
+        ridge - Defines a 3D ridged border. The effect depends on the border-color value
+        inset - Defines a 3D inset border. The effect depends on the border-color value
+        outset - Defines a 3D outset border. The effect depends on the border-color value
+        none - Defines no border
+        hidden - Defines a hidden border
+
+* The width can be set as a specific size (in px, pt, cm, em, etc) or by using one of the three pre-defined values: thin, medium, or thick
+
+* Border style:
+    If the border-style property has four values:
+        border-style: dotted solid double dashed;
+           - top border is dotted
+           - right border is solid
+           - bottom border is double
+           - left border is dashed
+    If the border-style property has three values:
+        border-style: dotted solid double;
+           - top border is dotted
+           - right and left borders are solid
+           - bottom border is double
+    If the border-style property has two values:
+        border-style: dotted solid;
+           - top and bottom borders are dotted
+           - right and left borders are solid
+    If the border-style property has one value:
+        border-style: dotted;
+           - all four borders are dotted
+
+* The border property is a shorthand property for the following individual border properties:
+    - border-width
+    - border-style (required)
+    - border-color
+    example : "border: 5px solid red;"
+
+* We also can specify all the individual properties for just one side.
+    example : "border-left: 6px solid red;"
+
+* The CSS margin properties are used to create space around elements, outside of any defined borders.
+    CSS has properties for specifying the margin for each side of an element:
+        - margin-top
+        - margin-right
+        - margin-bottom
+        - margin-left
+
+* Margin shorthand property
+    If the margin property has four values:
+        margin: 25px 50px 75px 100px;
+            - top margin is 25px
+            - right margin is 50px
+            - bottom margin is 75px
+            - left margin is 100px
+    If the margin property has three values:
+        margin: 25px 50px 75px;
+            - top margin is 25px
+            - right and left margins are 50px
+            - bottom margin is 75px
+    If the margin property has two values:
+        margin: 25px 50px;
+            - top and bottom margins are 25px
+            - right and left margins are 50px
+    If the margin property has one value:
+        margin: 25px;
+            - all four margins are 25px
+
+    -- we also can define 1. margin-top, 2. margin-left, 3. margin-right, 4. margin-bottom egula individually o declare kora jay.
+
+* You can set the margin property to auto to horizontally center the element within its container. The element will then take up the specified width, and the remaining space will be split equally between the left and right margins.
+
+* We also use "inherit" as the value of margin property. It inherits the value of parent's same property.
+
+* Top and bottom margins of elements are sometimes collapsed into a single margin that is equal to the largest of the two margins. This does not happen on left and right margins! Only top and bottom margins!
+    [mane ager element er bottom margin 50px & porer element er top margin 30px hoy taile ei element 2tar moddhe diff 80px na hoye diff hobe 50px. Etai margin collapse.]
+
+* Padding is used to create space around an element's content, inside of any defined borders.
+    [all property is same as MARGIN]
+
+* The height and width properties are used to set the height and width of an element.
+* The height and width properties do not include padding, borders, or margins. It sets the height/width of the area inside the padding, border, and margin of the element.
+
+* The height and width properties may have the following values:
+    - auto - This is default. The browser calculates the height and width
+    - length - Defines the height/width in px, cm, etc.
+    - % - Defines the height/width in percent of the containing block
+    - initial - Sets the height/width to its default value
+    - inherit - The height/width will be inherited from its parent value
+
+* CSS Box Model -   Margin -> Border -> Padding -> Content -> Padding -> Border -> Margin
+    - Content - The content of the box, where text and images appear
+    - Padding - Clears an area around the content. The padding is transparent
+    - Border - A border that goes around the padding and content
+    - Margin - Clears an area outside the border. The margin is transparent
+
+* The total width of an element should be calculated like this:
+    Total element width = width + left padding + right padding + left border + right border + left margin + right margin
+
+* The total height of an element should be calculated like this:
+    Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin
+
+* Outline works alike border. Appears after Border.
+* An outline is a line that is drawn around elements, OUTSIDE the borders, to make the element "stand out".
+
+* The outline-style property specifies the style of the outline, and can have one of the following values:
+    - dotted - Defines a dotted outline
+    - dashed - Defines a dashed outline
+    - solid - Defines a solid outline
+    - double - Defines a double outline
+    - groove - Defines a 3D grooved outline
+    - ridge - Defines a 3D ridged outline
+    - inset - Defines a 3D inset outline
+    - outset - Defines a 3D outset outline
+    - none - Defines no outline
+    - hidden - Defines a hidden outline
+
+* The outline-width property specifies the width of the outline, and can have one of the following values:
+    - thin (typically 1px)
+    - medium (typically 3px)
+    - thick (typically 5px)
+    - A specific size (in px, pt, cm, em, etc)
+
+* The outline-color property is used to set the color of the outline.
+    The color can be set by:
+        -name - specify a color name, like "red"
+        - HEX - specify a hex value, like "#ff0000"
+        - RGB - specify a RGB value, like "rgb(255,0,0)"
+        - HSL - specify a HSL value, like "hsl(0, 100%, 50%)"
+        - invert - performs a color inversion (which ensures that the outline is visible, regardless of color background)
+
+* The outline property is a shorthand property for setting the following individual outline properties:
+    - outline-width
+    - outline-style (required)
+    - outline-color
+    The outline property is specified as one, two, or three values from the list above. The order of the values does not matter.
+
+* The outline-offset property adds space between an outline and the edge/border of an element. The space between an element and its outline is transparent.
+
+
 
 
 
