@@ -196,6 +196,52 @@
 
 * The outline-offset property adds space between an outline and the edge/border of an element. The space between an element and its outline is transparent.
 
+-- TEXT FORMATING --
+
+* The color property is used to set the color of the text. The color is specified by:
+    - a color name - like "red"
+    - a HEX value - like "#ff0000"
+    - an RGB value - like "rgb(255,0,0)"
+
+* Text align : this value can be 1. left, 2. right, 3. center, 4. justify.
+    When the text-align property is set to "justify", each line is stretched so that every line has equal width, and the left and right margins are straight (like in magazines and newspapers):
+
+* Text align last : The text-align-last property specifies how to align the last line of a text.
+                     this value can be 1. left, 2. right, 3. center, 4. justify.
+
+* Text direction : The <direction> and <unicode-bidi> properties can be used to change the text direction of an element.
+
+* Unicode bidi : Used together with the direction property to set or return whether the text should be overridden to support multiple languages in the same document.
+
+* Text decoration : 
+    - text-decoration-line : value could be overline, underline, line-through [multiple value is acceptable]
+    - text-decoration-color : any valid color in form of hexcode, rgb or direct color name
+    - text-decoration-style : value could be solid, dotted, double, dashed, wavy
+    - text-decoration-thickness : we can set the value in px, cm, %, auto, etc.
+
+    shorthand text-decoration property: text-decoration: line(required) color(optional) style(optional) thickness(optional)
+
+* All links in HTML are underlined by default. Sometimes you see that links are styled with no underline. The text-decoration: none; is used to remove the underline from links.
+
+* Text transformation : text-transform: value could be 1. uppercase, 2. lowercase, 3. capitalized
+
+* Text Spacing : 
+    1. text-indent : The text-indent property is used to specify the indentation of the first line of a text
+    2. letter-spacing : The letter-spacing property is used to specify the space between the characters in a text.
+    3. line-height : The line-height property is used to specify the space between lines
+    4. word-spacing : The word-spacing property is used to specify the space between the words in a text.
+    5. white-space : The white-space property specifies how white-space inside an element is handled.
+                    value - nowrap | eta dile line er majhe jotoi white space dei na ken kono kaj hobe na. sokol unneccessary white space remove hoye jabe autometically.
+
+* Text Shadow : The text-shadow property adds shadow to text.
+                notation -- text-shadow: value1[horizontal shadow] value2[vertical shadow] value3[to make shadow blur] color;
+
+
+
+
+
+
+
 
 
 
