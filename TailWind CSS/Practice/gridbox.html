@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+<body>
+
+    <!-- Grid Template Cols -->
+    <div class="grid grid-cols-4 gap-4">
+        <div class="bg-blue-500">01</div>
+        <div class="bg-blue-500">02</div>
+        <div class="bg-blue-500">03</div>
+        <div class="bg-blue-500">04</div>
+        <div class="bg-blue-500">05</div>
+        <div class="bg-blue-500">06</div>
+        <div class="bg-blue-500">07</div>
+        <div class="bg-blue-500">08</div>
+        <div class="bg-blue-500">09</div>
+    </div><br>
+
+
+    <!-- Grid Column Start/End : col-[auto/start/end/span]-[value[1-12/auto[for end & start only]]] - start means from where span starts, end means where span ended-->
+    <div class="grid grid-cols-3 gap-4">
+        <div class="bg-blue-500">01</div>
+        <div class="bg-blue-500">02</div>
+        <div class="bg-blue-500">03</div>
+        <div class="bg-blue-500 col-span-2">04</div>
+        <div class="bg-blue-500">05</div>
+        <div class="bg-blue-500">06</div>
+        <div class="bg-blue-500 col-span-2">07</div>
+    </div><br>
+
+    <div class="grid grid-cols-6 gap-4">
+        <div class="bg-blue-500 col-start-2 col-span-4 ">01</div>
+        <div class="bg-blue-500 col-start-1 col-end-3 ">02</div>
+        <div class="bg-blue-500 col-end-7 col-span-2 ">03</div>
+        <div class="bg-blue-500 col-start-1 col-end-7 ">04</div>
+    </div><br>
+
+    <!-- Grid Template Rows : grid-rows-[1-6/none] -->
+    <!-- same as grid columns -->
+
+    <!-- Grid Flow : grid-flow-[option] - option can be row. col, dense, row-dense, col-dense -->
+    <div class="grid grid-flow-row-dense grid-cols-3 grid-rows-3 gap-4">
+        <div class="col-span-2 bg-green-500">01</div>
+        <div class="col-span-2 bg-green-500">02</div>
+        <div class=" bg-green-500">03</div>
+        <div class=" bg-green-500">04</div>
+        <div class=" bg-green-500">05</div>
+    </div><br>
+
+    <!-- Grid Auto Columns : auto-cols-[option] - option can be auto, min, max, fr -->
+    <div class="grid grid-flow-col auto-cols-min gap-4">
+        <div class=" bg-green-500">01</div>
+        <div class=" bg-green-500">02</div>
+        <div class=" bg-green-500">03</div>
+        <div class=" bg-green-500">04</div>
+        <div class=" bg-green-500">05</div>
+    </div><br>
+
+    <!-- Grid Auto Rows : auto-rows-[option] - same as Grid Auto columns -->
+
+    <!-- Gap : gap-[option]-[size] - optione can be null, x, y & size can be any valid css size -->
+
+    <!-- Justify Content : justify-[option] - option can be normal, start, end, center, between, around, evenly, stretch -->
+    <!-- Utilities for controllling how flex and grid items are positioned along a container's main axis -->
+    <div class="flex justify-evenly gap-4">
+        <div class="bg-red-500">01</div>
+        <div class="bg-red-500">02</div>
+        <div class="bg-red-500">03</div>
+    </div><br>
+
+    <!-- Justify Items : justify-items-[option] - option can be start, end, center, stretch -->
+    <!-- Utilities for controlling how grid items are aligned along their inline axis -->
+    <!-- Justify Self : justify-self-[option] - option can be auto, start, end, center, stretch -->
+    <!-- Utilities for controlling how an individual grid item is aligned along its inline axis -->
+    <div class="grid grid-cols-3 justify-items-start gap-4">
+        <div class="bg-red-500">01</div>
+        <div class="bg-red-500 justify-self-center">02</div>
+        <div class="bg-red-500 justify-self-stretch">03</div>
+        <div class="bg-red-500">04</div>
+        <div class="bg-red-500">05</div>
+        <div class="bg-red-500">06</div>
+    </div><br>
+
+    <!-- Align Content : content-[option] - option can be normal, center, start, end, between, around, evenly, baseline, stretch -->
+    <!-- Utilities for controlling how rows are positioned in multi-row flex and grid containers -->
+    <div class="h-32 grid grid-cols-3 content-between bg-violet-300 gap-4">
+        <div class="bg-violet-500">01</div>
+        <div class="bg-violet-500">02</div>
+        <div class="bg-violet-500">03</div>
+        <div class="bg-violet-500">04</div>
+        <div class="bg-violet-500">05</div>
+    </div><br>
+
+    <!-- Align Items : items-[option] - start, end, center, baseline, stretch -->
+    <!-- Align Self : self-[option] - auto, start, end, center, stretch, baseline -->
+    <div class="h-36 grid grid-cols-3 items-center bg-violet-300 gap-4">
+        <div class="bg-violet-500 py-4 self-end">01</div>
+        <div class="bg-violet-500 py-12">02</div>
+        <div class="bg-violet-500 py-8">03</div>
+    </div><br>
+
+    <!-- Place Content : place-content-[option] - center, start, end, between, around, evenly, baseline, stretch -->
+    <div class="h-48 grid grid-cols-2 place-content-center bg-violet-300 gap-4">
+        <div class="bg-violet-500">01</div>
+        <div class="bg-violet-500">02</div>
+        <div class="bg-violet-500">03</div>
+        <div class="bg-violet-500">04</div>
+    </div><br>
+
+    <!-- Place items : place-items-[option] - center, start, end, between, around, evenly, baseline, stretch -->
+    <!-- Place Self : place-self-[options] - auto, start, end, center, stretch -->
+    <div class="h-48 grid grid-cols-2 place-items-center bg-violet-300 gap-4">
+        <div class="bg-violet-500">01</div>
+        <div class="bg-violet-500 place-self-start">02</div>
+        <div class="bg-violet-500">03</div>
+        <div class="bg-violet-500">04</div>
+    </div><br>
+
+</body>
+</html>

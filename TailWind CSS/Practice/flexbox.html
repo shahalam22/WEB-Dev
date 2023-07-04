@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+<body>
+    
+    <!-- Flex-basis -->
+    <div class="flex flex-row">
+        <div class="basis-1/4 mx-4 bg-pink-600">01</div>
+        <div class="basis-1/4 mx-4 bg-pink-600">02</div>
+        <div class="basis-1/2 mx-4 bg-pink-600">03</div>
+    </div><br>
+
+    <!-- Flex Direction : flex-[option] - here option can be row, row-reverse, col, col-reverse -->
+    <div class="flex flex-row-reverse">
+        <div class="basis-1/4 mx-2 bg-pink-600">01</div>
+        <div class="basis-1/4 mx-2 bg-pink-600">02</div>
+        <div class="basis-1/4 mx-2 bg-pink-600">03</div>
+    </div><br>
+
+    <!-- Flex Wrap : flex-[option] - option can be wrap, nowrap, wrap-reverse -->
+    <div class="flex flex-row flex-nowrap">
+        <div class="basis-1/2 mx-2 bg-pink-600">01</div><br>
+        <div class="basis-1/2 mx-2 bg-pink-600">02</div><br>
+        <div class="basis-1/2 mx-2 bg-pink-600">03</div><br>
+    </div><br>
+
+    <!-- Flex : flex-[option] - option can be numeric value, auto, initial, none -->
+    <div class="flex"> <!--initially ja deya tai thakbe-->
+        <div class="flex-none w-14 mx-2 h-14 bg-green-600">01</div>
+        <div class="flex-initial mx-2 w-64 bg-green-600">02</div>
+        <div class="flex-initial mx-2 w-32 bg-green-600">03</div>
+    </div><br>
+    <div class="flex"> <!--numeric ja deya tai thakbe [initial value guneo na]-->
+        <div class="flex-none w-14 mx-2 h-14 bg-green-600">01</div>
+        <div class="flex-1 mx-2 w-64 bg-green-600">02</div>
+        <div class="flex-1 mx-2 w-32 bg-green-600">03</div>
+    </div><br>
+    <div class="flex"> <!--screen onujayi autometically decide hobe-->
+        <div class="flex-none w-14 mx-2 h-14 bg-green-600">01</div>
+        <div class="flex-auto mx-2 w-64 bg-green-600">02</div>
+        <div class="flex-auto mx-2 w-32 bg-green-600">03</div>
+    </div><br>
+
+    <!-- Grow - grow/grow-0 - jei value deya flexbox tar cheye akare boro hobe -->
+    <div class="flex"> <!--screen onujayi autometically decide hobe-->
+        <div class="flex-none w-14 mx-2 h-14 bg-green-600">01</div>
+        <div class="grow mx-2 h-14 bg-green-600">02</div>
+        <div class="flex-none mx-2 w-14 h-14 bg-green-600">03</div>
+    </div><br>
+
+    <!-- Flex Shrink - shrink/shrink-0 - jei value deya flexbox tar cheye akare choto hobe -->
+    <div class="flex"> <!--screen onujayi autometically decide hobe-->
+        <div class="flex-none w-44 mx-2 h-14 bg-green-600">01</div>
+        <div class="shrink mx-2 w-80 bg-green-600">02</div>
+        <div class="flex-none mx-2 w-44 bg-green-600">03</div>
+    </div><br>
+
+    <!-- Flex Order : order-[option] - option can be 1-12, first, last, none -->
+    <div class="flex"> <!--screen onujayi autometically decide hobe-->
+        <div class="flex-auto order-last mx-2 w-14 h-14 bg-green-600">01</div>
+        <div class="flex-auto mx-2 w-14 bg-green-600">02</div>
+        <div class="flex-auto order-first mx-2 w-14 bg-green-600">03</div>
+    </div><br>
+
+</body>
+</html>

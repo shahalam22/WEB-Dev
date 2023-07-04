@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+<body>
+    <!-- Font family -->
+    <div class="mx-5 font-sans">I'm using mx-5</div>
+    <div class="mx-5 font-serif">I'm using mx-5</div>
+    <div class="mx-5 font-mono">I'm using mx-5</div>
+    <p class="mx-5 font-sans hover:font-serif">Hover over this text and see the magic</p>
+    <br>
+
+    <!-- Font Size - text-[size] here, size could be xs,sm,lg,base,xl,2xl,3xl,4xl...-->
+    <p class="mx-5 text-xs">The quick brown fox jumps over the lazy dog</p>
+    <p class="mx-5 text-sm">The quick brown fox jumps over the lazy dog</p>
+    <p class="mx-5 text-base">The quick brown fox jumps over the lazy dog</p>
+    <br>
+
+    <!-- we can set Font Size with line height font-[size]/[line height] -->
+    <p class="mx-5 text-base/4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quisquam porro asperiores maxime totam itaque! Quam voluptas ullam nobis corrupti repellendus, animi assumenda excepturi deserunt reprehenderit, suscipit corporis quaerat explicabo.</p>
+    <br>
+    <p class="mx-5 text-base/8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quisquam porro asperiores maxime totam itaque! Quam voluptas ullam nobis corrupti repellendus, animi assumenda excepturi deserunt reprehenderit, suscipit corporis quaerat explicabo.</p>
+    <br>
+    <p class="mx-5 text-base/[15px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quisquam porro asperiores maxime totam itaque! Quam voluptas ullam nobis corrupti repellendus, animi assumenda excepturi deserunt reprehenderit, suscipit corporis quaerat explicabo.</p>
+    <br>
+    <p class="mx-5 text-base/[15px] hover:text-lg/[20px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quisquam porro asperiores maxime totam itaque! Quam voluptas ullam nobis corrupti repellendus, animi assumenda excepturi deserunt reprehenderit, suscipit corporis quaerat explicabo.</p>
+    <br>
+
+    <!-- Font smoothing -->
+    <p class="mx-5 subpixel-antialiased text-base/6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quisquam porro asperiores maxime totam itaque! Quam voluptas ullam nobis corrupti repellendus, animi assumenda excepturi deserunt reprehenderit, suscipit corporis quaerat explicabo.</p>
+    <br>
+    <p class="mx-5 antialiased text-base/6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quisquam porro asperiores maxime totam itaque! Quam voluptas ullam nobis corrupti repellendus, animi assumenda excepturi deserunt reprehenderit, suscipit corporis quaerat explicabo.</p>
+    <br>
+
+    <!-- Font Style - italic/non-italic -->
+    <p class="mx-5 italic">The quick brown fox jumps over the lazy dog</p>
+    <p class="mx-5 non-italic">The quick brown fox jumps over the lazy dog</p>
+    <br>
+
+    <!-- Font Weight - font-[weight] - this can be thin, extralight, light, normal, medium, semibold, bold, extrabold, black -->
+    <p class="mx-5 font-bold">The quick brown fox jumps over the lazy dog</p>
+    <p class="mx-5 font-black">The quick brown fox jumps over the lazy dog</p>
+    <p class="mx-5 font-extralight">The quick brown fox jumps over the lazy dog</p>
+    <br>
+
+    <!-- Font Numeric Variant [this may not work over some font families]-->
+    <p class="mx-5 font-mono normal-nums">0123456789</p>
+    <p class="mx-5 font-mono ordinal">1st</p> <!--use ordinal utility to enable special glyphs for the ordinal markers. 1^st-->
+    <p class="mx-5 font-mono slashed-zero">0</p>
+    <p class="mx-5 font-mono lining-nums">0123456789</p>
+    <p class="mx-5 font-mono oldstyle-nums">0123456789</p>
+    <p class="mx-5 font-mono proportional-nums">121212</p>
+    <p class="mx-5 font-mono proportional-nums">909090</p>
+    <p class="mx-5 font-mono tabular-nums">121212</p>
+    <p class="mx-5 font-mono tabular-nums">909090</p>
+    <p class="mx-5 font-mono diagonal-fractions">1/2 3/4 5/6</p>
+    <p class="mx-5 font-mono stacked-fractions">1/2 3/4 5/6</p>
+    <br>
+
+    <!-- Letter Spacing - tracling-[option] - option can be tighter, tight, normal, wide, wider, widest -->
+    <p class="mx-5 tracking-tighter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit aut officia pariatur provident inventore facere dolore perferendis dolorem repellat. At nulla assumenda quia tempore! Nihil eos nemo quod nam dolores.</p>
+    <br>
+    <p class="mx-5 tracking-widest">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit aut officia pariatur provident inventore facere dolore perferendis dolorem repellat. At nulla assumenda quia tempore! Nihil eos nemo quod nam dolores.</p>
+    <br>
+    <p class="mx-5 -tracking-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit aut officia pariatur provident inventore facere dolore perferendis dolorem repellat. At nulla assumenda quia tempore! Nihil eos nemo quod nam dolores.</p>
+    <br>
+    <!-- we also can put arbitrary value here -->
+    <p class="mx-5 tracking-[5px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit aut officia pariatur provident inventore facere dolore perferendis dolorem repellat. At nulla assumenda quia tempore! Nihil eos nemo quod nam dolores.</p>
+    <br>
+
+    <!-- Line Clamp - use to save text into this number of lines -->
+    <!-- in the below example our extra text after 3 line will be presented through "..." -->
+    <p class="mx-5 line-clamp-3 hover:line-clamp-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione animi architecto pariatur dolorum laudantium numquam? Fugit nemo accusamus earum ad velit eum repellendus at placeat, laudantium aspernatur consectetur ab hic? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque ut excepturi ipsam molestiae quasi odio nobis temporibus sed? Eaque explicabo blanditiis nihil similique non numquam, nam laudantium dicta voluptate impedit.</p>
+    <br>
+
+    <!-- Line Height - leading-[option] - option can be 3,4,5,6,7,8,9,10,none,tight,snug,normal,relaxed,loose -->
+    <p class="mx-5 leading-[40px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor deleniti expedita quam. Eius qui odio quae est iure delectus illo. Aliquam inventore fugit consectetur provident, possimus voluptatibus vel praesentium sequi.
+    Rerum labore, optio sint, quaerat quisquam quia quibusdam quos sapiente, inventore ipsa maiores. Debitis sed rem aperiam accusantium? Illo commodi enim harum iusto eius error voluptate dolore a distinctio voluptatem.</p>
+    <br>
+
+    <!-- List Style Image - list-image-[url(address)] -->
+    <ul class="mx-5  list-image-none">
+        <li>Rice</li>
+        <li>Bread</li>
+        <li>Milk</li>
+    </ul>
+    <br>
+
+    <!-- List Style Position - list-[option] - option can be inside/outside -->
+    <ul class="mx-5 list-disc list-inside">
+        <li>Rice is our main food. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, neque maxime facere sequi expedita vel? Error, doloremque, odio accusantium saepe fugiat, libero expedita velit nem.</li>
+        <li>Bread Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi eos, distinctio molestiae velit dolore, ex quo, quae sint obcaecati earum neque. Totam laborum optio ex repudiandae a deserunt modi non.</li>
+        <li>Milk Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum laborum officia, obcaecati ab consequuntur cupiditate totam nisi voluptatem necessitatibus iusto delectus accusamus architecto dolo</li>
+    </ul>
+    <br>
+
+    <!-- List Style Type - list-[option] - option can be none, disc, decimal. We have shown them previously -->
+
+    <!-- TEXT ALIGN - text-[option] - option can be left,center,right,justify,start,end -->
+    <p class="mx-5 text-end">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus consequuntur beatae nisi corrupti! Tempora consequatur ex pariatur laboriosam, laudantium deserunt commodi omnis magnam non cupiditate fuga eligendi dolore incidunt in!
+    Sed accusamus cum quas voluptatem hic magni deleniti ut alias a nobis esse in temporibus blanditiis quaerat error sequi iste repellendus adipisci est, dolor voluptates sapiente. Hic ad ea asperiores.</p>
+    <br>
+
+    <!-- TEXT COLOR - text-[color]-[intencity] - color, intencity could be a lots of them.-->
+    <!-- TEXT COLOR - text-[color]-[intencity]/[opacity] - color, intencity could be a lots of them. We also can set opacity [100/75/50/25/0]-->
+    <!-- apart regular expression for color we also see - text-[option] - option can be inherit,current,transparent,black,white -->
+    <p class="mx-5 text-rose-700">The quick brown fox jumps over the lazy dog</p>
+    <p class="mx-5 text-rose-600">The quick brown fox jumps over the lazy dog</p>
+    <p class="mx-5 text-rose-500">The quick brown fox jumps over the lazy dog</p>
+    <p class="mx-5 text-rose-400">The quick brown fox jumps over the lazy dog</p>
+    <p class="mx-5 text-red-900/100">The quick brown fox jumps over the lazy dog</p>
+    <p class="mx-5 text-red-900/75">The quick brown fox jumps over the lazy dog</p>
+    <p class="mx-5 text-red-900/50">The quick brown fox jumps over the lazy dog</p>
+    <p class="mx-5 text-red-900/25">The quick brown fox jumps over the lazy dog</p>
+    <br>
+    
+    <!-- Text Decoration - [option] - option can be underline,overline,line-through,none -->
+    <p class="mx-5 underline">The quick brown fox jumps over the lazy dog</p>
+    
+    <!-- decoration must be declared first to work with decoration color/style/thickness/offset -->
+
+    <!-- Text Decoration Color - decoration-[color]-[intencity] - left else everything same as text-color -->
+    <p class="mx-5 underline decoration-red-700">The quick brown fox jumps over the lazy dog</p>
+    
+
+    <!-- Text Decoration Style - decoration-[option] - option can be solid, double, dotted, dashed, wavy -->
+    <p class="mx-5 underline decoration-dotted">The quick brown fox jumps over the lazy dog</p>
+    <p class="mx-5 underline decoration-wavy">The quick brown fox jumps over the lazy dog</p>
+    
+
+    <!-- Text Decoration Thickness - decoration-[option] - option can be auto, form-font, 0, 1, 4, 8 -->
+    <p class="mx-5 underline decoration-2">The quick brown fox jumps over the lazy dog</p>
+    <p class="mx-5 underline decoration-[10px]">The quick brown fox jumps over the lazy dog</p>
+    
+    <!-- Text Underline Offset - underline-offset-[option] - option can be auto,0,1,2,4,8 -->
+    <p class="mx-5 underline underline-offset-8">The quick brown fox jumps over the lazy dog</p>
+    <br>
+
+    <!-- Text Transform - [option] - option can be uppercase, lowercase, capitalized, normal-case(default)-->
+    <p class="mx-5 uppercase">The quick brown fox jumps over the lazy dog</p>
+    <br>
+
+    <!-- Text Overflow - [option] - option can be truncate, text-ellipsis overflow-hidden, text-clip overflow-hidden -->
+    <p class="mx-5 truncate">The quick brown fox jumps overlijsfljoisjfoslefjslefjskfejsdhfsjhfsjdfksdfhsukhfskdfjsdkfskf the lazy dog Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, nemo. Blanditiis dolor libero, amet pariatur repudiandae ipsa exercitationem nulla totam officiis error. Recusandae molestias quas quia quibusdam odit maxime dolorum.</p>
+    <br>
+
+    <!-- Text Indent - indent-[option] - option can be various types of sizes in px, em, rem units -->
+    <div class="mx-5 indent-[50px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat optio, ex dolorem laborum minima tempora, odit sed quis, dolorum excepturi nam magnam natus iste accusantium ipsa voluptatum quae nihil praesentium?
+         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni assumenda totam debitis ea commodi non corporis autem. Minima harum pariatur suscipit id doloremque, laboriosam, quibusdam blanditiis eligendi corrupti incidunt magni!
+    </div>
+    <br>
+
+    <!-- Vertical Align - align-[option] - option can be baseline, top, middle, bottom, sub, super, text-top, text-bottom -->
+    <p class="mx-5"><span class="align-top">The quick brown fox jumps over the lazy dog</span>
+        <span class="align-middle">The quick brown fox jumps over the lazy dog</span>
+        <span class="align-bottom">The quick brown fox jumps over the lazy dog</span>
+    </p><br>
+    
+    <!-- WhiteSpace - whitespace-[option] - option can be normal, nowrap, pre, pre-line, pre-wrap, break-spaces-->
+    <div class="w-3/4">
+        <div class="whitespace-normal">Hey Everyone!
+            
+            It's almost 2022    and we still don't know if there    is aliens living among us, or do we? Maybe the person writing this is an alien.
+
+            You will never know.
+        </div>
+    </div>
+    <br>
+    <!-- <div class="w-3/4">
+        <div class="whitespace-nowrap">Hey Everyone!
+            
+            It's almost 2022    and we still don't know if there    is aliens living among us, or do we? Maybe the person writing this is an alien.
+
+            You will never know.
+        </div>
+    </div>
+    <br>
+    <div class="w-3/4">
+        <div class="whitespace-pre">Hey Everyone!
+            
+            It's almost 2022    and we still don't know if there    is aliens living among us, or do we? Maybe the person writing this is an alien.
+
+            You will never know.
+        </div>
+    </div> -->
+
+    <!-- Word Break - break-[option] - option can be normal, words, all, keep -->
+
+    <!-- Hyphens - hyphens-[option] - option can be none, manual, auto -->
+
+</body>
+</html>

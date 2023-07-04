@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+<body>
+
+    <!-- Aspect Ratio - sets the aspect ratio of element : aspect-[option] - option can be auto, square, video -->
+    <!-- see aspect example with Columns example -->
+
+    <!-- Container : container - this class sets the "max-width" of an element to match the "min-width" of the current breakpoint -->
+    <div class="container mx-auto px-5">The quick brown fox jumps over the lazy dog</div>
+    <br>
+
+    <!-- Columns : this says the number of columns should be in the total content : columns-[size] - size can be 1-12, auto, 3xs-7xl -->
+    <div class="columns-3 mx-3 gap-10">
+        <img src="./img/wallpapers-43.jpg" class="aspect-video" alt="nature image" srcset="">
+        <img src="./img/wallpapers-54.jpg" class="aspect-auto" alt="nature image" srcset="">
+        <img src="./img/wallpapers-79.jpg" class="aspect-square" alt="nature image" srcset="">
+    </div>
+    <br>
+
+    <!-- Break After : break-after-[option] - option can be auto, avoid, all, avoid-page, page, left, right, column : Utilities for controlling how a column or page should break after an element -->
+    <div class="columns-2 mx-5">
+        <p>Well, let me tell you something...</p>
+        <p>Sure, go ahead, laugh...</p>
+        <p class="break-after-column">Maybe we can live without...</p>
+        <p>Look. If you think this is...</p>
+    </div>
+    <br>
+
+    <!-- Break before : break-before-[option] - option can be auto, avoid, all, avoid-page, page, left, right, column : Utilities for controlling how a column or page should break before an element -->
+    <div class="columns-2 mx-5">
+        <p>Well, let me tell you something...</p>
+        <p class="break-before-column">Sure, go ahead, laugh...</p>
+        <p>Maybe we can live without...</p>
+        <p>Look. If you think this is...</p>
+    </div>
+    <br>
+
+    <!-- Break Inside : break-inside-[option] - option can be auto, avoid, avoid-column, avoid-page : Utilities for controlling how a column or page should break within an element -->
+    <div class="columns-2 mx-5">
+        <p>Well, let me tell you something...</p>
+        <p>Sure, go ahead, laugh...</p>
+        <p>Maybe we can live without...</p>
+        <p class="break-inside-avoid-column">Look. If you think this is...</p>
+    </div>
+    <br>
+
+    <!-- Box Decoration Break : box-decoration-[option] - option can be clone, slice -->
+    <span class="mx-5 box-decoration-slice bg-gradient-to-r from-indigo-800 to-pink-600 text-white px-2">
+        Hello<br/>World
+    </span>
+    <br><br>
+    <span class="mx-5 box-decoration-clone bg-gradient-to-r from-indigo-800 to-pink-600 text-white px-2">
+        Hello<br/>World
+    </span>
+    <br><br>
+
+    <!-- Box Sizing : box-[option] - option can be border, content -->
+    <div class="mx-5 box-border h-32 w-32 p-4 border-4">
+        <p>This is a box. So, practice box model stuffs</p>    
+    </div><br>
+    <div class="mx-5 box-content h-32 w-32 p-4 border-4">
+        <p>This is a box. So, practice box model stuffs</p>    
+    </div><br>
+
+    <!-- Display : [option] - option can be 
+        flex, inline-flex, table, inline-table, table-caption, table-cell, table-column, table-column-group, table-footer-group, table-header-group, table-row-group, table-row, flow-root, grid, inline-grid, contents, list-item, hidden
+    -->
+    <!-- inline, block, inline-block -->
+    <div class="mx-5">
+        When controlling flow of text, using the css property <span class="inline">display: inline</span>
+        will cause the text inside the element to wrap normally. 
+
+        While using the property <span class="inline-block">display: inline-block</span>
+        will wrap the element to prevent the text inside from extending beyond its parent. 
+
+        Lastly, using the property <span class="block">display: block</span>
+        will put the element on its own line and fill its parents.
+    </div>
+    <br>
+    <!-- flow-root -->
+    <div class="p-4">
+        <div class="flow-root"> <!--flow-root : creates block level element-->
+            <div class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam magnam ducimus voluptas asperiores odit odio perspiciatis. Autem minima praesentium repellendus at ipsam! Quam sint adipisci, ea ipsum ipsa inventore non!</div>
+        </div>
+        <div class="flow-root">
+            <div class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam magnam ducimus voluptas asperiores odit odio perspiciatis. Autem minima praesentium repellendus at ipsam! Quam sint adipisci, ea ipsum ipsa inventore non!</div>
+        </div>
+    </div>
+    <!-- flex -->
+    <div class="flex mx-5 items-center">
+        <img src="./img/wallpapers-79.jpg" class="h-14" alt="" srcset="">
+        <div>
+            <strong class="mx-4">Andrew Alfred</strong>
+            <span>Technical Advisor</span>
+        </div>
+    </div>
+    <br>
+    <!-- inline-flex -->
+    <p class="mx-5">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur voluptatum voluptatibus velit autem voluptates? Quam, repudiandae libero? Provident, corporis nobis molestiae, cum magni vitae ad, culpa dolorum deleniti nemo sit.
+        <span class="inline-flex">
+            <img src="./img/wallpapers-81.jpg" class="h-5 " alt="" srcset="">
+            <strong>&nbsp;Shah Alam Abir</strong>
+        </span>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, veritatis. Quia velit maxime at cum rerum similique, cumque eligendi officiis aut facilis officia molestiae laudantium, nobis fuga, nam provident? Quia.
+    </p>
+    <br>
+    <!-- grid -->
+    <div class="grid gap-4 grid-cols-4 grid-rows-3 ">
+        <p class="bg-pink-400 text-center">01</p>
+        <p class="bg-pink-400 text-center">02</p>
+        <p class="bg-pink-400 text-center">03</p>
+        <p class="bg-pink-400 text-center">04</p>
+        <p class="bg-pink-400 text-center">05</p>
+        <p class="bg-pink-400 text-center">06</p>
+        <p class="bg-pink-400 text-center">07</p>
+        <p class="bg-pink-400 text-center">08</p>
+        <p class="bg-pink-400 text-center">09</p>
+        <p class="bg-pink-400 text-center">10</p>
+        <p class="bg-pink-400 text-center">11</p>
+        <p class="bg-pink-400 text-center">12</p>
+    </div>
+    <br>
+    <!-- inline grid -->
+    <div class="inline-grid gap-4 grid-cols-6 ">
+        <p class="bg-pink-400 text-center">01</p>
+        <p class="bg-pink-400 text-center">02</p>
+        <p class="bg-pink-400 text-center">03</p>
+        <p class="bg-pink-400 text-center">04</p>
+        <p class="bg-pink-400 text-center">05</p>
+        <p class="bg-pink-400 text-center">06</p>
+        <p class="bg-pink-400 text-center">07</p>
+        <p class="bg-pink-400 text-center">08</p>
+        <p class="bg-pink-400 text-center">09</p>
+        <p class="bg-pink-400 text-center">10</p>
+        <p class="bg-pink-400 text-center">11</p>
+        <p class="bg-pink-400 text-center">12</p>
+    </div>
+    <br><br>
+    <!-- Contents -->
+    <div class="flex">
+        <div class="flex-1">01</div>
+        <div class="contents"> <!--here 02 & 03 will acts as the child of class flex-->
+            <div class="flex-1">02</div>
+            <div class="flex-1">03</div>
+        </div>
+        <div class="flex-1">04</div>
+    </div>
+    <br>
+    <!-- Table -->
+    <div class="table w-full">
+        <div class="table-header-group">
+            <div class="table-row">
+                <div class="table-cell text-center">Song</div>
+                <div class="table-cell text-center">Artist</div>
+                <div class="table-cell text-center">Year</div>
+            </div>
+        </div>
+        <div class="table-row-group">
+            <div class="table-row">
+                <div class="table-cell text-center">The Sliding Mr. Bones</div>
+                <div class="table-cell text-center">Malcolm Lockyer</div>
+                <div class="table-cell text-center">1961</div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell text-center">Witchy Woman</div>
+                <div class="table-cell text-center">The Eagles</div>
+                <div class="table-cell text-center">1972</div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell text-center">Shining Star</div>
+                <div class="table-cell text-center">Earth, Wind and Fire</div>
+                <div class="table-cell text-center">1975</div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!-- Hidden -->
+    <div class="flex mx-5">
+        <p class="hidden mx-5">01</p><br>
+        <p class="block mx-5">02</p>
+        <p class="block mx-5">03</p>
+    </div>
+    <br>
+    
+
+    <!-- Floats : float-[option] - option can be right, left, none -->
+    <img src="./img/wallpapers-82.jpg" class="h-20 float-right" alt="" srcset="">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, repellendus dolore magnam voluptatum, eum nulla ullam id fugit ea animi aperiam reprehenderit numquam, debitis in ex sed nisi neque ipsa? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil temporibus eaque aut obcaecati, unde magni sunt nobis suscipit fugiat, repellendus dolorem, facilis sint est blanditiis quis corporis eos quia explicabo.</p>
+    <br>
+
+    <!-- Clear : clear-[option] - option can be left [porer element left er niche boshbe], right[porer element right er niche boshbe], both[porer element both er niche boshbe], none -->
+    <img src="./img/wallpapers-82.jpg" class="h-40 float-left" alt="" srcset="">
+    <img src="./img/wallpapers-82.jpg" class="h-60 float-right" alt="" srcset="">
+    <p class="clear-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, repellendus dolore magnam voluptatum, eum nulla ullam id fugit ea animi aperiam reprehenderit numquam, debitis in ex sed nisi neque ipsa? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil temporibus eaque aut obcaecati, unde magni sunt nobis suscipit fugiat, repellendus dolorem, facilis sint est blanditiis quis corporis eos quia explicabo.</p>
+    <br>
+
+    <!-- Isolate - [option] - option can be isolate, isolate-auto -->
+    <!-- we use Isolate to prevent blending of image when we stack more than 2 image at a single place -->
+
+    <!-- Object Fit - object-[option] - option can be contain, cover, fill, none, scale-down -->
+    <!-- object-contain - Resize an element's content to stay contained within it's container -->
+    <div class="bg-purple-300">
+        <img src="./img/wallpapers-54.jpg" alt="" class="object-contain h-48 w-96">
+    </div>
+    <br>
+    <!-- object-cover - Resize an element's content to cover its container -->
+    <div class="bg-purple-300">
+        <img src="./img/wallpapers-54.jpg" alt="" class="object-cover h-48 w-96">
+    </div>
+    <br>
+    <!-- object-fill - Stretch an element's content to fit it's container -->
+    <div class="bg-purple-300">
+        <img src="./img/wallpapers-54.jpg" alt="" class="object-fill h-48 w-96">
+    </div>
+    <br>
+    <!-- object-scale-down - Display an element's content at its original size but scale it down to fit its container if necessary-->
+    <div class="bg-purple-300">
+        <img src="./img/wallpapers-54.jpg" alt="" class="object-scale-down h-48 w-96">
+    </div>
+    <br>
+    <!-- object-none -->
+    <div class="bg-purple-300">
+        <img src="./img/wallpapers-54.jpg" alt="" class="object-none h-48 w-96">
+    </div>
+    <br>
+
+    <!-- Object Position - object-[option] - option can be bottom, center, left, left-bottom, left-top, right, right-top, right-bottom, top -->
+    <!-- This will return us that positional part of this pic -->
+    <div>
+        <img src="./img/wallpapers-43.jpg" class="object-none object-right-top bg-yellow-300 h-24" alt="">
+        <img src="./img/wallpapers-43.jpg" class="object-none object-top bg-yellow-300 h-24" alt="">
+        <img src="./img/wallpapers-43.jpg" class="object-none object-right-top bg-yellow-300 h-24" alt="">
+        <img src="./img/wallpapers-43.jpg" class="object-none object-left bg-yellow-300 h-24" alt="">
+        <img src="./img/wallpapers-43.jpg" class="object-none object-center bg-yellow-300 h-24" alt="">
+        <img src="./img/wallpapers-43.jpg" class="object-none object-right bg-yellow-300 h-24" alt="">
+        <img src="./img/wallpapers-43.jpg" class="object-none object-left-bottom bg-yellow-300 h-24" alt="">
+        <img src="./img/wallpapers-43.jpg" class="object-none object-right-bottom bg-yellow-300 h-24" alt="">
+        <img src="./img/wallpapers-43.jpg" class="object-none object-bottom bg-yellow-300 h-24" alt="">
+    </div>
+    <br>
+
+    <!-- Overflow : overflow-[option] - option can be auto, hidden, clip, visible, scroll, x-auto, y-auto, x-hidden, y-hidden, x-clip, y-clip, x-visible, y-visible, x-scroll, y-scroll-->
+    <div class="flex mx-5 overflow-scroll h-36 bg-green-500">
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, illo! Placeat, quas sit quis tempore at mollitia aliquam aperiam, saepe eligendi eum nam possimus consequatur eveniet voluptatum, soluta laborum voluptate!
+            Aperiam atque adipisci ducimus ad praesentium quaerat facere dolorem delectus odit iste, voluptate rem quas eius inventore similique minima ullam illum consequatur accusamus molestias. At aliquid optio ipsa consectetur temporibus!
+            Numquam ullam tempora, repudiandae vel velit reprehenderit ut perspiciatis suscipit cupiditate quidem pariatur repellat tempore. Hic harum doloremque nulla quis dolorem aperiam ipsa totam nesciunt, quia fugiat saepe mollitia est!
+        </div>    
+        <div >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, illo! Placeat, quas sit quis tempore at mollitia aliquam aperiam, saepe eligendi eum nam possimus consequatur eveniet voluptatum, soluta laborum voluptate!
+            Aperiam atque adipisci ducimus ad praesentium quaerat facere dolorem delectus odit iste, voluptate rem quas eius inventore similique minima ullam illum consequatur accusamus molestias. At aliquid optio ipsa consectetur temporibus!
+            Numquam ullam tempora, repudiandae vel velit reprehenderit ut perspiciatis suscipit cupiditate quidem pariatur repellat tempore. Hic harum doloremque nulla quis dolorem aperiam ipsa totam nesciunt, quia fugiat saepe mollitia est!
+        </div>    
+    </div><br>
+    
+    <!-- Overscroll Behavior : overscroll-[option] - option can be contain, auto, none, x-contain, x-auto, x-none, y-contain, y-auto, y-none  -->
+    <div class="overflow-scroll overscroll-contain h-36 w-60">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat cumque eaque ab ratione animi magni voluptas dolorem quia obcaecati reprehenderit sed modi deleniti vel sint illo quaerat delectus, itaque placeat.
+        Assumenda vero reprehenderit numquam nisi adipisci obcaecati molestiae! Architecto veniam harum tenetur dolorem obcaecati officiis qui quis natus amet temporibus in modi hic nostrum, doloremque aut nam consequuntur. Expedita, nesciunt.
+        Labore enim debitis aliquid doloribus accusantium eaque, velit porro ipsam suscipit error optio repudiandae qui autem natus recusandae dolorem nemo quisquam ducimus, fuga placeat harum dignissimos a? Corporis, sint beatae!
+    </div><br>
+    <div class="overflow-scroll overscroll-auto h-36 w-60">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat cumque eaque ab ratione animi magni voluptas dolorem quia obcaecati reprehenderit sed modi deleniti vel sint illo quaerat delectus, itaque placeat.
+        Assumenda vero reprehenderit numquam nisi adipisci obcaecati molestiae! Architecto veniam harum tenetur dolorem obcaecati officiis qui quis natus amet temporibus in modi hic nostrum, doloremque aut nam consequuntur. Expedita, nesciunt.
+        Labore enim debitis aliquid doloribus accusantium eaque, velit porro ipsam suscipit error optio repudiandae qui autem natus recusandae dolorem nemo quisquam ducimus, fuga placeat harum dignissimos a? Corporis, sint beatae!
+    </div><br>
+
+    <!-- Position : [option] - option can be static fixed absolute relative sticky -->
+    <div class="static h-14 w-36 bg-green-500">
+        <p>This is a static position holder</p>
+    </div>
+    <div class="absolute bottom-0 right-0 h-14 w-25 bg-blue-500">
+        <p>This is a absolute position holder</p>
+    </div>
+    <div class="fixed top-0 right-0 h-14 w-25 bg-red-500">
+        <p>This is a fixed position holder</p>
+    </div><br>
+    <div class="sticky top-0 bg-yellow-500">
+        <p>This is a sticky position holder</p>
+    </div><br>
+
+    <!-- Top|Right|Bottom|Left - inset/inset-x/inset-y/start/end/top/right/bottom/left-[size] -->
+    <div class="relative h-32 w-32 bg-red-300">
+        <div class="absolute left-0 top-0 h-20 w-20 bg-red-600"></div>
+    </div><br>
+    <div class="relative h-32 w-32 bg-red-300">
+        <div class="absolute inset-x-0 top-0 h-20 bg-red-600"></div>
+    </div><br>
+    <div class="relative h-32 w-32 bg-red-300">
+        <div class="absolute inset-0 bg-red-600"></div>
+    </div><br>
+    <div class="relative h-32 w-32 bg-red-300">
+        <div class="absolute -bottom-5 -right-5 h-28 w-28 bg-red-600"></div>
+    </div><br>
+
+    <!-- Visibility - [option] - option can be visible, invisible, collapse -->
+    <div class="grid grid-cols-3 gap-4 ">
+        <div class="bg-violet-600">01</div>
+        <div class="invisible">02</div>
+        <div class="bg-violet-600">03</div>
+    </div><br>
+    <!-- collapse is also same but we use collapse for table -->
+
+    <!-- Z-index - z-[size] : in z-index there are multiple element are in a stack. Which element has highest z-index value that one remains on the top of the stack -->
+    <div class="flex">
+        <div class="z-40 bg-blue-500">05</div>
+        <div class="z-30 bg-red-500">04</div>
+        <div class="z-20 bg-violet-500">03</div>
+        <div class="z-10 bg-yellow-500">02</div>
+        <div class="z-0 bg-green-500">01</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+/*overflow property*/
+
+div.visible {
+    background-color: coral;
+    width: 200px;
+    height: 65px;
+    border: 1px solid black;
+    overflow: visible;
+}
+div.hidden {
+    background-color: coral;
+    width: 200px;
+    height: 65px;
+    border: 1px solid black;
+    overflow: hidden;
+}
+div.scroll {
+    background-color: coral;
+    width: 200px;
+    height: 65px;
+    border: 1px solid black;
+    overflow: scroll;
+    overflow-wrap: normal;
+}
+div.auto {
+    background-color: coral;
+    width: 200px;
+    height: 65px;
+    border: 1px solid black;
+    overflow: auto;
+    overflow-wrap: break-word;
+}
+div.XY {
+    background-color: coral;
+    width: 200px;
+    height: 65px;
+    border: 1px solid black;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    overflow-wrap: anywhere;
+}
+
+/*float property*/
+img {
+    height: 170px;
+    width: 200px;
+    margin-left: 15px;
+    float: right; /*this value could be left / none */
+}
+
+/*Float Next To Each Other*/
+/*
+div {
+  float: left;
+  padding: 15px; 
+}
+
+.div1 {
+  background: red;
+}
+
+.div2 {
+  background: yellow;
+}
+
+.div3 {
+  background: green;
+}
+*/
+
+/*clear property*/
+.div1 {
+    float: left;
+    padding: 10px;
+    border: 3px solid #73AD21;
+}
+  
+.div2 {
+    padding: 10px;
+    border: 3px solid red;
+}
+  
+.div3 {
+    float: left;
+    padding: 10px;  
+    border: 3px solid #73AD21;
+}
+  
+.div4 {
+    padding: 10px;
+    border: 3px solid red;
+    clear: left;
+}
+
+/*clearfix uses*/
+.clearfix {
+    overflow: auto;
+}
+/*modern clearfix*/
+/*
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+*/

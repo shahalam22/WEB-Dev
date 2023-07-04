@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+<body>
+    
+
+    <!-- Border Radius : rounded-none/ rounded-[a]-[size]/ rounded-[a][b]-[size] - here a & b can be s, e, t, b, l, r and size can be any valid size -->
+    <div class="mx-5 my-3 h-16 rounded bg-violet-900"></div>
+    <div class="mx-5 my-3 h-16 rounded-md bg-violet-900"></div>
+    <div class="mx-5 my-3 h-16 rounded-lg bg-violet-900"></div>
+    <div class="mx-5 my-3 h-16 rounded-3xl bg-violet-900"></div>
+    <div class="mx-5 my-3 h-16 rounded-full bg-violet-900"></div>
+
+    <div class="mx-5 my-3 h-16 rounded-none bg-violet-900"></div>
+    <div class="mx-5 my-3 h-16 rounded-t-full bg-violet-900"></div>
+    <div class="mx-5 my-3 h-16 rounded-se-full bg-violet-900"></div>
+    <div class="mx-5 my-3 h-16 rounded-tl-full bg-violet-900"></div>
+
+
+    <!-- Border Width : border-[size]/ border-[x | y | t | b | l | r]-[size] -->
+    <div class="mx-5 my-3 h-16 border-4 border-violet-900 bg-violet-400"></div>
+    
+    
+    <!-- Divide Width : divide-[x/y]-[size] / divide-[x/y]-reverse -->
+    <!-- Divide color : divide-[color]-[intencity] -->
+    <!-- Divide style : divide-[option] - option can be solid, dashed, dotted, double, none -->
+    <!-- between elements -->
+    <div class="divide-y-4 divide-dashed divide-violet-950 bg-violet-400">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+    </div><br>
+    <div class="divide-x-4 divide-solid grid grid-cols-3 divide-violet-950 bg-violet-400">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+    </div><br>
+
+
+    <!-- Border Color : border-[inheit|current|transparent|black/white|color]-[intencity]/[opacity] - we used color in previous examples -->
+    <!-- border-[r|l|t|b|x|y]-[color]-[intencity] - this is being used to give color in individual side -->
+
+
+    <!-- Border Style : border-[style] - style can be solid, dashed, dotted, double, hidden, none -->
+    <div class="mx-5 my-3 h-16 border-4 border-solid border-violet-900 bg-violet-400"></div>
+    <div class="mx-5 my-3 h-16 border-4 border-dashed border-violet-900 bg-violet-400"></div>
+    <div class="mx-5 my-3 h-16 border-4 border-dotted border-violet-900 bg-violet-400"></div>
+    <div class="mx-5 my-3 h-16 border-4 border-hidden border-violet-900 bg-violet-400"></div>
+    <div class="mx-5 my-3 h-16 border-4 border-double border-violet-900 bg-violet-400"></div>
+    <div class="mx-5 my-3 h-16 border-4 border-none border-violet-900 bg-violet-400"></div>
+    <br>
+
+
+    <!-- Outline Width : outline-[size] -->
+    <!-- Outline color : outline-[color]-[size]/[opacity] -->
+    <button class="outline outline-4 outline-cyan-500 bg-cyan-700 mx-5 my-5">Button A</button>
+    <!-- Outline Style : outline-[option] - none, dashed, dotted, double -->
+    <button class="outline-dashed outline-4 outline-cyan-500 bg-cyan-700 mx-5 my-5">Button B</button>
+    <!-- Outline Offset - border theke koto dur e outline hobe ta set kora -->
+    <button class="outline outline-4 outline-offset-8 outline-cyan-500 bg-cyan-700 mx-5 my-5">Button B</button>
+
+
+    <!-- Ring Width : ring-[size] -->
+    <!-- Ring Color : ring-[color]-[intencity]/[opacity] -->
+    <!-- Ring Offset : ring-offset-[size] -->
+    <!-- Ring Offset Color : ring-offset-[color] - sets the color of the empty space-->
+    <button class="outline outline-offset-4 outline-cyan-600 ring-offset-2 ring-2 ring-offset-slate-950 ring-red-800 bg-cyan-700 mx-5 my-5">Button A</button>
+    
+
+
+
+
+
+
+
+</body>
+</html>
