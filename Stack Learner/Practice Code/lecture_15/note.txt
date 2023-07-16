@@ -1,0 +1,79 @@
+-- Backend RoadMap --
+
+Api Degine
+    - REST Api
+    - GraphQL
+    - gRPC
+    - SOAP
+    - Web Socket [really tough to scale]
+    - Message Broker [Not a beginner friendly concept]
+Api Security
+    - JWT Token
+    - Refresh Token 
+    - OAuth2
+    - SAML
+    - Identity Provider (Cognite, Auth, Firebase, etc)
+    - Role Based Authorization
+    [last three is not much beginner point to handle]
+Api testing
+    - Unit test
+    - Acceptance test 
+    - Load test
+Api Documentation
+    - Swagger 
+    - Postman
+Database
+    - NoSQL
+        - MongoDB [for normal]
+        - AWS DynamoDB [for cloud]
+    - SQL 
+        - PostgreSQL
+        - MySQL
+        - MSSQL / Oracle
+    - In Memory [these are being used for caching]
+        - Redis 
+        - Mem Cached
+    - Graph Database
+        - Neo4j
+Linux Server
+
+Cloud Computing
+
+Devops
+
+
+
+-- Server Application Responsibilities --
+
+    - Listen Request
+        - always same
+    - Process
+        - Alogorithm
+        - Data Structure
+        - Database 
+        - Problem Solving 
+        - CRUD operations
+    - Response 
+        - always same
+
+    comment: This is the tasks we have to perform in backend servers. As all three of them is repeatative task in backend server. So, we will use EXPRESS JS as the framework for doing these tasks
+            We have to handle every task on the different route to modify later easily.
+            Server ekta ei main thakbe. Ar port holo ei server er kon port diye amra amder code ta execute korte cacchi. like [server -> main elctric line | port -> all the ports we do use]
+
+    - HTTP 
+        - It builds an stateless communication [it closes all communication with server as they gets required response against their request]
+        - It performs mainly 5 operations 
+            - GET - to read data from server
+            - POST - create new data 
+            - PUT/PATCH - update existing data 
+            - DELETE - delete data from database
+
+        - Routing pattern
+            - GET [everything] - /books
+            - GET [only one] - /books/bookid
+            - POST New book - /books
+            - Update book - /books/bookid
+            - DELETE book - /books/bookid 
+
+
+- REQUEST -> middile [logger, body perser, file perser, user IP, block ip, authentication, authorization, validation]-> CONTROLLER(business logic) -> middleware [as error handler] -> RESPONSE
