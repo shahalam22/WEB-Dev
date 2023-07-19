@@ -1,9 +1,31 @@
+const Poll = require('./poll')
+
 exports.createPollGetController = (req, res, next) => {
     res.render('create')
 }
 
-exports.createPollPostController = (req, res, next) => {
+exports.createPollPostController = async (req, res, next) => {
     console.log(req.body);
 
-    res.render('create')
+    let {title, description, options} = req.body
+
+    options = options.map((opt) => {
+        return {
+            name: opt,
+            vote: 0
+        }
+    })
+
+    let poll = Poll({
+        title,
+        description,
+        options
+    })
+
+    try{
+        await poll.save()
+        res.redirect('/polls')
+    }catch (e){
+        console.log(e);
+    }
 }

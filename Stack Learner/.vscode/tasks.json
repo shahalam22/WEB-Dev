@@ -1,0 +1,17 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "install",
+			"path": "Practice Code/lecture_15",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [],
+			"label": "npm: install - Practice Code/lecture_15",
+			"detail": "install dependencies from package"
+		}
+	]
+}

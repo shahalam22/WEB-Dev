@@ -31,10 +31,10 @@
                         <div id="options">
                             <p>Enter your options</p>
                             <div class="form-group">
-                                <input type="text" name="option 1" class="form-control" placeholder="Option 1">
+                                <input type="text" name="options" class="form-control" placeholder="Option 1">
                             </div>
                             <div class="form-group">
-                                <input type="text" name="option 2" class="form-control" placeholder="Option 2">
+                                <input type="text" name="options" class="form-control" placeholder="Option 2">
                             </div>
                         </div>
                         <button class="btn btn-secondary btn-sm" id="addOptions">
@@ -76,7 +76,7 @@
 
             let input = document.createElement('input')
             input.type = 'text'
-            input.name = 'option' + currentOptionNumber
+            input.name = 'options'
             input.placeholder = 'Option ' + currentOptionNumber
             currentOptionNumber++;
 
