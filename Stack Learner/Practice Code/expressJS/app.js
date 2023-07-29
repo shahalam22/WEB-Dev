@@ -43,6 +43,13 @@ app.get('/create', pollController.createPollGetController)
 
 app.post('/create', pollController.createPollPostController)
 
+app.get('/polls/:id', pollController.viewPollGetController)
+
+app.post('/polls/:id', pollController.viewPollPostController)
+
+app.get('/polls', pollController.getallPolls)
+
+
 //if we provide localhost instead of 127.0.0.1 then it doesn't works
 mongoose.connect("mongodb://127.0.0.1:27017/test", {
    useNewUrlParser: true
