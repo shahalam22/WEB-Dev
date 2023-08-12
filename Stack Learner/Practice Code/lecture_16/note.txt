@@ -1,0 +1,57 @@
+In this lecture we will do or know about
+    - middleware
+        This is just a reuseable controller function with a callback function as argument. Once we create one middleware for a specific task we can later use this middleware when it's necessary in the application.
+
+        Request -> M1 -> M2 -> M3 -> ... -> Response [we can send response also from our middlewares if necessary]
+
+        Signature of a MiddleWare [for NODEJS]
+
+        //we won't call this function. Express will invoke it automatically for us.
+
+        //this is a middleware -> generates next() function
+        function MW(request, response, next(this is a callback function)){
+            //if we define any response here then it will return some response according to that commands
+            //if we don't define any next() [callback] function then request will stuck in this middleware & won't proceed further.
+            //most of the case res() has no task to perform in middleware. They are being used to solve conrner cases
+
+            next()
+
+        }
+
+        //this is a controller - generates response()
+        function cont(request, response, next()){
+            //most of the case next() has no task to perform in controller. They are being used to solve conrner cases
+            
+            res.something()
+
+        }
+
+        Routes that we use in Express are kind of middleware
+
+        We can use middlewares globally and in a specified route
+
+        We write final business logic into the controller. Apart of business logics we write every task [lika data validation, authentication] for smooth performance of controller in middlewares.
+
+
+    - Project Structure
+    - Mini Project
+
+
+- Single Page Application - jekhane html file ta frontend ei thakbe. Backend theke html generate hobe na. Backend theke frontend just data nibe API er maddhome.
+- Multi Page Application - jekhane pura html file tai backend e generate hoye then frontend e client er samne ashbe. Server & frontend ek jaygay thake.
+- Monolithic application er jonno CLEAN CODE ARCHITECTURE follow kora lage.
+
+- To make an MONOLITHIC project we will make "app", "models", "routes", "controller", "services", "middlewares", "util", "db", "config", "logs", "error" folders.
+    - Then create app.js into app folders. Export app.js not listen
+    - then create server.js in the root directory
+    - creating server using app.js & protocol type
+    - install dotenv packages "npm install dotenv"
+    - add .env & default.env 
+    - generate a gitignore file from web by searching "gitignore genarator"
+    - creating an .gitignore file using these web genrated contents
+    *** jokhon amra ei project ta ke git e push korbo tokhon konovabei .env file ke push korbo na. karon eta amader project er most of the sensitive data contain kore rakhe
+    - configuring dotenv at server.js & app.js
+    - install some middlewares named "cors", "morgan", etc others also if needed
+    - add middlewares at "app.js"
+    - configuring these middlewares in app.js
+    - handle errors if it shows any error

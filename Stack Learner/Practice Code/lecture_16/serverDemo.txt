@@ -1,0 +1,62 @@
+const express = require('express');
+
+const app = express()
+
+//creating middleware 1
+const simpleLogger = (req, res, next) => {
+    console.log(`${req.url} - ${req.method} - ${new Date().toISOString()}`);
+
+    const name = req.query.name;
+    if(name === 'abir'){
+        return res.json({message: 'Bad request'});  //"http://localhost:8000/hello?name=abir" if we use this than it will return "Bad request" else it will proceed to next funtion from this middleware to app.get controller's response funtion
+    }
+
+    next();
+};
+
+//creating middleware 2
+const secondMiddleware = (req, res, next) => {
+    console.log(`I am second Middleware.`);
+}
+
+
+// //creating a controller - example of specific route oriented middleware
+// app.get('/hello', simpleLogger, (req, res, next) => {
+
+//     //suppose, now we want to see the requests that are sent from client in the console.
+//     // In that case we can write a line of code here like "console.log(`${req.url} - ${req.method} - ${new Date().toISOString()}`)"
+//     // But when we have 1000's of controller then we have to write this line of code thousand times. Which is highly errorprone. 
+//     // In that case we can make a middleware between the req and response. "simpleLogger" is such a middleware
+
+//     res.json({message: 'Hello'});
+// })
+
+// app.get('/', simpleLogger, (req, res, next) => {
+//     res.json({message: 'Sweet Home'});
+// })
+
+
+//to make use of a middleware globally we have to do app.use()
+app.use(simpleLogger); //this will be used for every controler. if we want to use it in 4 controller out of 5 and 1 where we don't want to use it. In that case we have to use that middleware locally in that 4 controller
+app.use(secondMiddleware); //adding second middleware as global middleware
+
+//we can also do this "app.use([simpleLogger, secondMiddleware])" for declare them as global middleware
+//we can do this "app.get('route', [simpleLogger, secondMiddleware], (res, req, next) => {})" for locally declaration 
+
+
+app.get('/hello', (req, res, next) => {
+    res.json({message: 'Hello'});
+})
+
+app.get('/', (req, res, next) => {
+    res.json({message: 'Sweet Home'});
+})
+
+
+// //we can use this to make any file/ folder public in our web app using this
+// app.use(express.static(__dirname + '/public'));
+
+
+app.listen(8000, () => {
+    console.log('Application is running on port 8000');
+})
