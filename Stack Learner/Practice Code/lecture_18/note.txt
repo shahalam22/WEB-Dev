@@ -1,0 +1,6 @@
+There is 7 database paradigms
+
+1. Key-Value database
+    - machine jotokhon on thakbe totokhon data thakbe. PC restart nile/off korle data haray jabe.
+    - REDIS, MainCACHE, Amazone DynamoDB [this one can be defined as nosql database, wide-column database beside key-value database]
+    - Amazone DynamoDB is the most powerful noSQL database. There is three part in this Database 1. Partition key, 2. Hash Key, 3. Attributes. Others main concepts are Global Secondary Index, Secondary Index
