@@ -7,7 +7,7 @@ const server = http.createServer(app);      //http protocol diye "app" ke server
 
 const PORT = process.env.PORT || 8000;
 
-server.listen(8000, () => {     // ekhane port 8000 dite hobe emn kono issue nai. eta pc nije thekei fix kore. eta ekta varible value. so, amader fix kore deyar dorkar nai most of the case.
+server.listen(PORT, () => {     // ekhane port 8000 dite hobe emn kono issue nai. eta pc nije thekei fix kore. eta ekta varible value. so, amader fix kore deyar dorkar nai most of the case.
     console.log(`Server  listening on PORT ${PORT}.`);
 })
 

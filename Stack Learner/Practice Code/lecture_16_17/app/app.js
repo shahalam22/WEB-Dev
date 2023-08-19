@@ -43,8 +43,8 @@ app.use(
 // //     res.status(200).json({message: 'Success'});
 // // }) 
 
-// //calling routes from routes.js
-// app.use(routes)
+//calling routes from routes.js
+app.use(routes)
 
 
 // // error handlers that been created in app.js and used in app.js
