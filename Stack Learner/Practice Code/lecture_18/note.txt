@@ -1,6 +1,32 @@
+MAIN ARTICLE - https://tudip.com/blog-post/7-database-paradigms/
+
 There is 7 database paradigms
 
-1. Key-Value database
+1. Key-Value database [NOSQL]
     - machine jotokhon on thakbe totokhon data thakbe. PC restart nile/off korle data haray jabe.
-    - REDIS, MainCACHE, Amazone DynamoDB [this one can be defined as nosql database, wide-column database beside key-value database]
+    - REDIS [mainly used for caching], MainCACHE, Amazone DynamoDB [this one can be defined as nosql database, wide-column database beside key-value database]
     - Amazone DynamoDB is the most powerful noSQL database. There is three part in this Database 1. Partition key, 2. Hash Key, 3. Attributes. Others main concepts are Global Secondary Index, Secondary Index
+
+2. Wide-Column Database [NOSQL]
+    - same as key-value database. We can store data here in multiple dimension.
+    - Casendra, Apache HBases, Dolphin. Cassendra is most popular after mongoDB. Sometimes it works better than mongo in aspect of personal scalling
+
+3. Document Oriented Database [NOSQL]
+    - Rest of the discuss will be over this paradigms
+    - FireBase, MOngoDB. These are also noSQL databases.
+
+4. Relational Database [SQL]
+    - MySQL, PostgreSQL, Oracle, Amazon Arora
+
+5. Graph Database [NOSQL]
+    - mostly used in product recommendation. It is used to manage scattered data
+    - neo4JS is the most popular graph database
+
+6. A Full Text Search Engine [NOSQL]
+    - These databases stores data by indexing. These databases use hastable and hashing algorithms to store data. We can search out indexed data easily. These are faster than other databases but costly
+    - Elastic [old & trusted by industry], Algolia [works using nlp for best search results]
+
+7. MUlti Model Database [NOSQL]
+    - Works to convert database to graphQL. Closer to programming language. We can make these database through Type Definition like process and can access data through some queries
+    - FOANA
+

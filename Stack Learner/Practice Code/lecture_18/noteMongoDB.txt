@@ -1,0 +1,22 @@
+# Native Application - When we makes application where the application code, database, file system, email server, etc all 
+we need to develop an application are in a SINGLE server. Then these types of application development are called NATIVE 
+APPLICATION DEVELOPMENT
+
+
+Relational Database
+    - Most of the startups are now dependent on the scattered data of the users. [where they are browsing? which types of 
+      content they consumes? etc]. If we want to store these data in sql database. Then we have to define schema for such 
+      data. If after a while we get some different type of scattered data then we have to declare another schema to store 
+      the data and this will continue whenever we get new shaped data. This is a huge problem for the developer. To solve 
+      this issue, nosql databases came into the market
+    - in this nosql databases there is no need to maintain schema. Though data are from different collection, we can 
+      store them in the same database. There is no shape [schema] for data. Schema er problem holo data ke shape dite gele
+      kichu data either missing jabe or duplicate hobe
+    - JOINT [to join different data table]. This is called Database Normalization
+      Jei table e jototuku data thaka dorkar oi table e tototuku-i data thakbe. Then eder moddhe ekta pivot table banaye 
+      ederke ektar sathe arekta ke joint kore dilei hobe. [ek table e sob info eksathe rakhle eta maintain kora onek tough]
+      Tai main data koyekta segment vag kore alada alada table e rakhe joint kore deya hoy. User jokhon tar sob data chay
+      tokhon multiple table theke tar data niye eksathe marge kore take deya hoy. RDBMS er ei ekta problem that data joint
+      kora khub costly keta process.
+    - We can solve this problem using a simple JSON object
+      
