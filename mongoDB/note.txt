@@ -1,0 +1,20 @@
+MongoDB documentation highly recomended
+
+First of all we have to connect mongodb database with local host. 
+mongo - Command to do connect mongodb with localhost
+help - to see the command list of mongodb
+show dbs - to show all the databases in localhost
+use db_name - to create[if doesn't exist] & switch to the database names db_name
+db - to see current working database
+db.createCollection(Collection_name) - to create collection
+show collections - to see all the collections of the current database
+db.dropDatabase() - to delete database. But to do this first we have to move the database we want to delete
+db.collection_name.insertOne({}) - to insert one data
+db.collection_name.insertMany([{}, {}, {}]) - to insert multiple data
+db.collection_name.find() - to read documents from the database
+db.collection_name.find().pretty() - to read formatted document from the database
+db.collection_name.find(property) - to read documents that only contains that property
+db.collection_name.find(property).limit(n) - here we will see maximum n numbers of documents in this property-wise search
+db.collection_name.find(property).limit(n).pretty()
+db.collection_name.update({where to update},{$set : {updated data}}) - this is being used to update data. There is also methods updateById, updateMany, etc.
+db.collection_name.deleteOne({id}) - to delete one document
