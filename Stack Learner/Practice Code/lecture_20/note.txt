@@ -1,0 +1,26 @@
+ORM - Object Relational Mapping
+
+Mongoose is a widely used ORM in MERN stack to make a smooth database connectivity
+
+Database is stack independent. We have to select database according to our application requirements
+
+- install docker
+        Docker - application install & run korar sohoj maddhom. application install korle ta completely isolated thake, onno kono application/ system er upor provab fele na. Echara application completely packet kore khub easily duniyar jekono server / pc te shift kora jay
+                 Onek somoy ami ekta app banaye github e upload dile onno kew ta fork kore tar local e ei app chalale error pay [mainly system requirements kore na]. Ei problem theke bachte amra docker use korte pari. Docker er maddhome image[packed application] pathale onno kew eta smoothly use korte pare. ekhetre system requirements hen-ten esob dekhe na
+
+- Docker Hub : Eta onekta github er moto. Ekhane prottek application er ekta kore image upload kore rakha jay. Image holo github repository r moton. Amra upload kore rakha image ke fork kore nijeder system e smoothly chalate pari.
+
+- Mongoose : eta kaj kore schema o model er upor base kore. Amra to jani mongodb schemaless. taile mongoose e keno amra schema & model define kori? answer is that: Ekhane schema & model charai data store kora jay kintu schema & model chara data store korle onek garbage data o store hoye jay amader database e. Eisob garbage value/data jeno store na hoy tai amra schema & model use kori.
+             ei mongoose er kaj holo js application make korar jonno mongodb ke application er database hishebe add korar smooth ORM.
+
+- VPC (Vertual Private Cloud) : Jokhon amader full application er ek ek segment[parts like server, database, etc] ek ek cloud e thakbe tokhon proti ta http request & response create korte onek time jabe. karon ek ek cloud ek ek region e, multiple time access kora lage, etc. Kintu local server e thaklw ei application er sob http request & response khub joldi execute korte pare. Ei problem theke bachte VPC er concept ashe
+
+
+
+
+
+
+-- Docker commands [in windows powershell] -- 
+1. docker pull "application name" - to install new application
+2. docker images - to see the list of installed applications
+3. docker run -it "application name" - to run a specific application using docker
