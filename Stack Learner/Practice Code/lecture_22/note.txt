@@ -1,0 +1,7 @@
+** Authentication System System **
+
+Models -
+    - AdminAttendence.js
+    - Profile.js
+    - StudentAttendence.js
+    - User.js
