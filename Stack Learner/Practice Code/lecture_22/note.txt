@@ -5,3 +5,6 @@ Models -
     - Profile.js
     - StudentAttendence.js
     - User.js
+
+
+* Bcrypt.js use kore amra user er deya password encrypt kore database e store kori
