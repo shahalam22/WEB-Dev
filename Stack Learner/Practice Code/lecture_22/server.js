@@ -10,8 +10,9 @@ const app = express();
 // age ekta third-party middleware use kora lagto. Kintu ekhon ar use kora lage na. Ekhn body parse korte amra niche-r ,ethod follow korbo
 app.use(express.json());
 
+// register route
 // normal browser e just get request pathano jay and dekha jay ki hocche na hocche. Kintu post method dekha jay na. Er jonno "POSTMAN" use kora lagbe. 
-app.post('/register', async (req, res)=>{
+app.post('/register', async (req, res, next)=>{
 /**request er sathe input ashte pare jekhane jekhane :
  * req body - form theke je data input neya hoy
  * req params
@@ -37,26 +38,54 @@ app.post('/register', async (req, res)=>{
     // ebar email khuje pabo kivabe?? Database thake ei data. Database er sathe communicate kore mongoose diye banano model. Mongoose er kaj model banano porjontoi.
     // jehetu database er sathe only model communicate kore tai. Ekta database e kono req.body er data ache kina ta check kora jabe ei model er maddhomei.
     // prothomei, Model ke include korte hobe ei file e. Then model ke class consider kore search dite hobe. 
-    const user = await User.findOne({email})
+    try{
+        let user = await User.findOne({email})
 
-    if(user){
-        return res.status(400).json({message: "User already exists"});
+        if(user){
+            return res.status(400).json({message: "User already exists"});
+        }
+
+        user = new User({name, email, password});
+
+        //hashing part using bcrypt
+        const salt = await bcrypt.genSalt(10);
+        const hash = await bcrypt.hash(password, salt);
+        //hashing part ends
+
+        user.password = hash;
+        
+        await user.save();
+
+        return res.status(201).json({message: "User created successfully"});
+
+
+    }catch(err){
+        next(err);
     }
-
-    user = new User({name, email, password});
-
-    //hashing part using bcrypt
-    const salt = await bcrypt.genSalt(10);
-    const hash = await bcrypt.hash(password, salt);
-    //hashing part ends
-
-    user.password = hash;
-    
-    await user.save();
-
-    return res.status(201).json({message: "User created successfully"});
-
 })
+
+
+// login route
+app.post('/login', async (req, res, next)=>{
+    const {email, password} = req.body;
+
+    try{
+        const user = new User.findOne({email});
+        if(!user){
+            return res.status(400).json({message: "User not found"});
+        }
+
+        const isMatch = await bcrypt.compare(password, user.password);
+        if(!isMatch){
+            return res.status(400).json({message: "Invalid credentials  "})
+        }
+
+        delete user._doc.password;
+        return res.status(200).json({message: "Login Successfull", user});
+    }catch(err){
+        next(err);
+    }
+});
 
 
 app.get('/', (_, res)=>{
@@ -65,6 +94,13 @@ app.get('/', (_, res)=>{
         email: 'ayman@example.com',
     };
     res.json(obj);
+})
+
+
+// server error handling
+app.use((err, req, res, next) => {
+    console.log(err);
+    res.status(500).json({message: "Server Error Occured"})
 })
 
 
