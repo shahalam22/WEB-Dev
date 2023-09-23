@@ -1,6 +1,6 @@
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const User = require("../models/User");
+const error = require("../utils/error");
 const {findUserByProperty, createNewUser} = require("./user");
 
 
@@ -8,9 +8,7 @@ const registerService = async (name, email, password) => {
     let user = await findUserByProperty('email', email);
 
     if(user){
-        const error = new Error("User already exists");
-        error.status = 400;
-        throw error;    
+        throw error("User already exists", 400);    
     }
 
     //hashing part using bcrypt
@@ -24,17 +22,13 @@ const loginService = async (email, password) => {
     const user = await findUserByProperty('email', email);
     
     if(!user){
-        const error = new Error("User doesn't exists");
-        error.status = 400;
-        throw error;
+        throw error("User doesn't exists", 400);
     }
 
     const isMatch = await bcrypt.compare(password, user.password);
     
     if(!isMatch){
-        const error = new Error("User doesn't exists");
-        error.status = 403;
-        throw error;
+        throw error("User doesn't exists", 403);
     }
 
     const payload = {

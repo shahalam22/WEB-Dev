@@ -38,8 +38,10 @@ app.get('/', (_, res)=>{
 
 // server error handling
 app.use((err, req, res, next) => {
-    console.log(err);
-    res.status(500).json({message: "Server Error Occured"})
+    // console.log(err);
+    const message = err.message? err.message : "Server Error Occured";
+    const status = err.status? err.status : 500;
+    res.status(status).json({message});
 })
 
 
