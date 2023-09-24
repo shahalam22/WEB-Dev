@@ -5,7 +5,7 @@ async function authenticate(req, res, next){
     try{
         let token = req.headers.authorization;
         if(!token){
-            return res.status(401).json({message:"Unothorized access"});
+            return res.status(401).json({message:"Unathorized access"});
         }
 
         token = token.split(' ')[1]; // we will get token in the format of "Bearer token". So, we will split the token and get the token only. 
