@@ -1,0 +1,36 @@
+** Authentication System System **
+
+Models -
+    - AdminAttendence.js
+    - Profile.js
+    - StudentAttendence.js
+    - User.js
+
+
+User CRUD - 
+    - Get Users : /users
+    - Get User by ID : /users/userid
+    - Create User : /users
+    - Update User : /users/userid
+    - Delete User : /users/userid
+
+
+
+
+
+
+
+* Bcrypt.js use kore amra user er deya password encrypt kore database e store kori
+
+* JWT [json web token]
+    - JWT use kore amra user er jonno token generate kori
+    - Token generate korar por amra token ta client e send kori
+    - Client jodi token ta server e send kore tahole server token ta verify kore
+    - Token verify korar por server amader user er jonno data send kore
+
+    - Ekhane amra session cookies o use korte pari. But, multiple server theke data collect korar khetre bar bar amader oi server er kache jaowa lage data collect korte.
+    jotobar amra jabo totbar ei amra verified user oita check kore ney server gula. Eta session cookies use kore o kora jay. Kintu, kono server tader oikhane amader session coockie rakhte dibe na. Dileo oita manage kora so tough
+    ekaronei amra JWT use kore token generate kori. Eta easily manageable + independence + industry standard + secure + scalable + fast + easy to use + easy to implement + easy to understand.
+
+    - JWT holo encoded string. Ekhane data encoded thake + confidential data ei token er maddhome pass kora hoy na. Ei token er ekta part e HASHing lagano thake jekhane verification signature thake jeta amader server e save thake. Ei signature match koraye verify kore.
+    - Web token generate korte amader "jsonwebtoken" install kore nite hobe
