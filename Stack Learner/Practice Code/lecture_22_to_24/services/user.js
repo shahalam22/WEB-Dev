@@ -23,8 +23,17 @@ const createNewUser =({name, email, password, roles, accountStatus}) => {
     return user.save();
 }
 
+const updateUser = async (id, data) => {
+    const user = await findUserByProperty('email', data.email);
+    if(!user){
+        throw error("User not found", 404);
+    }
+    return user.FindByIdAndUpdate(id, {...data}, {new: true});
+}
+
 module.exports = {
     findUserByProperty,
     createNewUser,
-    findUsers
+    findUsers,
+    updateUser
 }

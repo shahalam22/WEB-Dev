@@ -18,8 +18,7 @@ router.get('/:userId', userController.getUserById);
  *      to find user by id or email we have to define user parameters. format ":parameter_name". These are varible that always replaces by the actual userID or userEmail.
  * @method PUT
 */
-router.put('/:userId', () => {});
-
+router.put('/:userId', userController.putUserById); 
 // "PUT" db te user thakle user er sokol attribute update kore dibe na thakle create korbe user. "PATCH" jokhon amra sure user achei tokhon user er 1/ek er beshi attribute update korte parbo. 
 
 /**
@@ -27,7 +26,7 @@ router.put('/:userId', () => {});
  *      to find user by id or email we have to define user parameters. format ":parameter_name". These are varible that always replaces by the actual userID or userEmail.
  * @method PATCH
 */
-router.patch('/:userId', () => {});
+router.patch('/:userId', userController.patchUserById);
 
 
 /**
@@ -35,7 +34,7 @@ router.patch('/:userId', () => {});
  *      to find user by id or email we have to define user parameters. format ":parameter_name". These are varible that always replaces by the actual userID or userEmail.
  * @method DELETE
 */
-router.delete('/:userId', () => {});
+router.delete('/:userId', userController.deleteUserById);
 
 
 /**
