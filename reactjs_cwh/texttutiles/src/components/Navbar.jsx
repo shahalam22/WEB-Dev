@@ -1,6 +1,8 @@
+//to deploy into github pages i have to undo Link that is imported from react-router-dom and use anchor tag
+
 import React from 'react'
 import propTypes from 'prop-types'
-import { Link } from 'react-router-dom/cjs/react-router-dom.min'
+// import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 
 export default function Navbar(props) {
   return (
@@ -9,15 +11,15 @@ export default function Navbar(props) {
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <Link class="navbar-brand" to="/">{props.title}</Link>
+        <a class="navbar-brand" href="#">{props.title}</a>
 
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <Link class="nav-link active" aria-current="page" to="/">Home</Link>
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <Link class="nav-link" to="/about">{props.abouttext}</Link>
+              <a class="nav-link" href="#">{props.abouttext}</a>
             </li>
           </ul>
           <form class="d-flex my-3" role="search">
