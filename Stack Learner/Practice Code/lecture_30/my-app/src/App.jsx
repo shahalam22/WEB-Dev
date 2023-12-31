@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Help from './pages/Help';
 import About from './pages/About';
 import Clock32 from "./pages/Clock32";
+import Task from "./pages/Task";
 
 function App(){
     return (
@@ -16,6 +17,8 @@ function App(){
                 <Route path="/help" element={<Help />}/>
 
                 <Route path="/clock" element={<Clock32 />}/>
+
+                <Route path="/task" element={<Task/>}/>
                     
             </Routes>
         </Router>        

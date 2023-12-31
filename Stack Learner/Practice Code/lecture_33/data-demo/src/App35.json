@@ -1,0 +1,17 @@
+{
+    "username":{
+        "type": "text",
+        "label": "What is your name?",
+        "placeholder": "John Doe"
+    },
+    "email":{
+        "type": "email",
+        "label": "What is your email?",
+        "placeholder": "johndoe@example.com"
+    },
+    "phone":{
+        "type": "tel",
+        "label": "What is your phone number?",
+        "placeholder": "555-555-5555"
+    }
+}
