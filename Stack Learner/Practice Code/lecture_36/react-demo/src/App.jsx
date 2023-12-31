@@ -1,237 +1,196 @@
-// // ALL ABOUT PROPS
+import './App.css';
 
-// // function ListItem(){
-// //     return (
-// //         <li>
-// //             <input type="checkbox" />
-// //             <span>Please check it 1</span>
-// //         </li>
-// //     );
-// // }
-
-// const ListItemArrow = (props) => (
-//     <li style={{listStyleType:'none', display:'flex', alignItems:'center'}}>
-//         <input type="checkbox" checked={props.checked}/>
-//         <p>{props.title}</p>
-//         <button style={{marginLeft:'auto'}}>Delete</button>
-//     </li>
-// );
-
-// const taskList = [
-//     {
-//         id: 1,
-//         title: 'title 1',
-//         cheked: true,
-//     },
-//     {
-//         id: 2,
-//         title: 'title 2',
-//         cheked: false,
-//     },
-//     {
-//         id: 3,
-//         title: 'title 3',
-//         cheked: false,
-//     },
-//     {
-//         id: 4,
-//         title: 'title 4',
-//         cheked: true,
-//     },
-//     {
-//         id: 5,
-//         title: 'title 5',
-//         cheked: false,
-//     },
-//     {
-//         id: 6,
-//         title: 'title 6',
-//         cheked: false,
-//     }
-// ]
-
-// function App(){
-
-//     // const listArr = 
-
-//     return (
-//         <div>
-//             {/* GENERATING LIST FROM FUNCTIONAL COMPONENT */}
-//             <ul>
-//                 <ListItemArrow title='title 1'/>
-//                 <ListItemArrow title='title 2'/>
-//                 <ListItemArrow title='title 3'/>
-//                 <ListItemArrow title='title 4'/>
-//                 <ListItemArrow title='title 5'/>
-//             </ul>
-
-//             {/* GENERATING LIST FROM ARRAY */}
-//             <ul>
-//                 {
-//                     taskList.map((item) => <ListItemArrow key={item.id} title={item.title} checked={item.cheked}/>)
-//                 }
-//             </ul>
-//         </div>
-//     )
-// }
-
-// export default App;
-
-
-
-// // ALL ABOUT STATE
-
-// //example 1
-
-// import { useState } from "react";
-
-// const Product = (props) => {
-//     const [count, setCount] = useState(0);
-
-//     const onIncrement = () => {
-//         if(count < stock){
-//             setCount(count + 1);
-//         }
-//     }
-
-//     const onDecrement = () => {
-//         if(count > 0){
-//             setCount(count - 1);
-//         }
-//     }
-//     return (
-//         <div>
-//             <h2>{props.title}</h2>
-//             <p>{count} / {props.stock}</p>
-//             <button onClick={onIncrement} disabled={count>=props.stock}>Increment</button>
-//             <button onClick={onDecrement} disabled={count === 0}>Decrement</button>
-//         </div>
-//     )
-// }
-
-// const App = () => {
-//     return (
-//         <div>
-//             <Product title='Keyboard'stock='15'/>
-//             <Product title='Mouse' stock='10'/>
-//             <Product title='Monitor' stock='0'/>
-//         </div>
-//     )
-// }
-
-// export default App;
-
-
-// example 2
-
-import { useState } from "react";
-
-const productList = [
+const tasks = [
     {
-        id: 1111222,
-        productName: 'Keyboard',
-        stock: 15,
-        price: 100,
+        id: 'unique_id_001',
+        subtitle: 'subtitle',
+        createdAt: '2022-04-24T18:04:42.7922',
+        tags: [
+            {
+                id: 'tag_id_001',
+                text: 'Its Done',
+                icon: 'D',
+            },
+            {
+                id: 'tag_id_002',
+                text: 'Its Cancelled',
+                icon: 'C',
+            },
+            {
+                id: 'tag_id_003',
+                text: 'Its In Progress',
+                icon: 'P',
+            },
+            {
+                id: 'tag_id_004',
+                text: 'Just Wrote It',
+                icon: 'W',
+            },
+        ],
+        comments: [
+            {
+                id: 'comment_id_001',
+                user: {
+                    avatar: 'xyz.com',
+                    name: 'user_1',
+                    id: 'user_id_001',
+                },
+                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit expedita sequi ab nihil sunt recusandae esse maxime illo distinctio autem rerum quaerat.'
+            },
+            {
+                id: 'comment_id_002',
+                user: {
+                    avatar: 'xyz.com',
+                    name: 'user_2',
+                    id: 'user_id_002',
+                },
+                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit expedita sequi ab nihil sunt recusandae esse maxime illo distinctio autem rerum quaerat.'
+            }
+        ],
+        tasks: [
+            {
+                id: 'task_id_001',
+                title: 'Foggy Nelson',
+                text: 'Here to clean the streets of Hells Kitchen',
+                status: 'done',
+            },
+            {
+                id: 'task_id_002',
+                title: 'Matt Murdock',
+                text: 'Here to clean the streets of Hells Kitchen',
+                status: 'cancelled',
+            },
+            {
+                id: 'task_id_003',
+                title: 'Jessica Jones',
+                text: 'Here to clean the streets of Hells Kitchen',
+                status: 'progress',
+            },
+            {
+                id: 'task_id_004',
+                title: 'Luke Cage',
+                text: 'Here to clean the streets of Hells Kitchen',
+                status: 'progress',
+            }
+        ]
     },
     {
-        id: 1111223,
-        productName: 'Mouse',
-        stock: 10,
-        price: 50,
+        id: 'unique_id_002',
+        subtitle: 'subtitle',
+        createdAt: '2022-04-24T18:04:42.7922',
+        tags: [
+            {
+                id: 'tag_id_001',
+                text: 'Its Done',
+                icon: 'D',
+            },
+            {
+                id: 'tag_id_002',
+                text: 'Its Cancelled',
+                icon: 'C',
+            },
+        ],
+        comments: [
+            {
+                id: 'comment_id_001',
+                user: {
+                    avatar: 'xyz.com',
+                    name: 'user_1',
+                    id: 'user_id_001',
+                },
+                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit expedita sequi ab nihil sunt recusandae esse maxime illo distinctio autem rerum quaerat.'
+            },
+        ],
+        tasks: [
+            {
+                id: 'task_id_001',
+                title: 'Foggy Nelson',
+                text: 'Here to clean the streets of Hells Kitchen',
+                status: 'done',
+            },
+            {
+                id: 'task_id_002',
+                title: 'Matt Murdock',
+                text: 'Here to clean the streets of Hells Kitchen',
+                status: 'cancelled',
+            },
+        ]
     },
-    {
-        id: 1111224,
-        productName: 'Monitor',
-        stock: 12,
-        price: 500,
-    },
-    {
-        id: 1111225,
-        productName: 'Laptop',
-        stock: 5,
-        price: 1000,    
-    },
-    {
-        id: 1111226,
-        productName: 'CPU',
-        stock: 3,
-        price: 200,
-    }
 ]
 
-const TableRow = ({id, productName, stock, price, quantity, total, increment, decrement}) => {
+
+function getDay(dateStr){
+    const date = new Date(dateStr).getDay();
+    const days = ['Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    return days[date];
+}
+
+function formatDate(dataStr){
+    const date = new Date(dataStr);
+    return `${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()}`;
+}
+
+const TagItemList = ({item}) => {
     return (
-        <tr>
-            <td>{id}</td>
-            <td>{productName}</td>
-            <td>{stock}</td>
-            <td>{price}</td>
-            <td>{quantity}</td>
-            <td>{total}</td>
-            <td>
-                <button onClick={()=>{increment(id)}} disabled={quantity===stock}>+</button>
-                <button onClick={()=>{decrement(id)}} disabled={quantity===0}>-</button>
-            </td>
-        </tr>
+        <li key={item.id}>
+            <small>{item.icon}</small> - {item.text}
+        </li>
     )
 }
 
-const App = () => {
-    const [products, setProducts] = useState(productList.map((item)=>(
-        {
-            ...item,
-            quantity: 0,
-            total: 0,
-        }
-    )));
-
-    const incrementQuantity = (id) => {
-        const newProducts = products.map((item)=>{
-            if(id === item.id && item.stock > item.quantity){
-                item.quantity++;
-                item.total = item.quantity * item.price;
-            }
-            return item;
-        })
-        setProducts(newProducts);
-    }
-
-    const decrementQuantity = (id) => {
-        const newProducts = products.map((item)=>{
-            if(id === item.id && item.quantity > 0){
-                item.quantity--;
-                item.total = item.quantity * item.price;
-            }
-            return item;
-        })
-        setProducts(newProducts);
-    }
-
-    const total = products.reduce((acc, cur) => acc + cur.total, 0);
-
+const CommentItem = ({comment}) => {
     return (
-        <div>
-            <h1>Product List</h1>
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Stock</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Total</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {products.map((product)=> <TableRow key={product.id} {...product} increment={incrementQuantity} decrement={decrementQuantity}/>)}
-                </tbody>
-            </table>
-            <h2>Total Price: {total} BDT</h2>
+        <div className='comment-item' key={comment.id}>
+            <h3>{comment.user.name}</h3>
+            <p>{comment.text}</p>
         </div>
     )
 }
 
+const TaskItem = ({item}) => {
+    return (
+        <li key={item.id}>
+            <h3>{item.title}</h3>
+            <p>
+                <small>{item.status}</small>
+            </p>
+            <p>{item.text}</p>
+        </li>
+    )
+}
+
+const TaskCard = ({task}) => {
+    return (
+        <div className='day-card'>
+            <h1 className='title'>
+                {getDay(task.createdAt)}, {formatDate(task.createdAt)}
+            </h1>
+            <h3 className='sub-title'>Subtitle</h3>
+
+            <ul className='tag-ul'>
+                {task.tags.map((item)=><TagItemList item={item}/>)}
+            </ul>
+            <div className='line'></div>
+
+            <p className='notes'>Notes linked to people</p>
+            <div className='comments'>
+                {task.comments.map((comment)=><CommentItem comment={comment}/>)}
+            </div>
+            <br />
+
+            <ul className='tasks'>
+                {task.tasks.map((item)=><TaskItem item={item}/>)}
+            </ul>
+        </div>
+    )
+}
+
+const App = () => {
+    return (
+        <div className='cards-group'>
+            {tasks.map((item)=><TaskCard key={item.id} task={item}/>)}
+        </div>
+    )
+}
 
 export default App;
