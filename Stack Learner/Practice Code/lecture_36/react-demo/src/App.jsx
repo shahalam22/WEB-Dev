@@ -1,23 +1,41 @@
-import { useState } from "react";
-import ContactForm from "./components/contact-app/ContactForm";
-import Table from "./components/contact-app/Table";
+import UseApp from "./App_hook_41";
 
 const App = () => {
-    const [contacts, setContacts] = useState([]);
 
-    const getContact = (values) => {
-        setContacts([].concat(contacts, values));
-    }
+
+    const {user, id, users, loading, nextHandler, prevHandler, max} = UseApp();
+
 
     return (
         <div>
-            <h1>Contact APP</h1>
-            <ContactForm getContact={getContact}/>
+            <h1>Users</h1>
+            <ul>
+                {users.map((user)=> <li key={user.id}>{user.name}</li>)}
+            </ul>
             <br />
-            <Table contacts={contacts}/>
+            <br />
+
+            <div>
+                <h1>User Details - {id}</h1>
+                {loading && <p>Loading...</p>}
+                {!loading && user && (
+                    <div>
+                        Name: {user.name}
+                        <br />
+                        Email: {user.email}
+                        <br />
+                        Phone: {user.phone}
+                        <br />
+                    </div>
+                )}
+                <br />
+                <div>
+                    <button disabled={id===1} onClick={prevHandler}>Previous</button>
+                    <button disabled={id===max} onClick={nextHandler}>Next</button>
+                </div>
+            </div>
         </div>
     )
 }
-
 
 export default App;

@@ -10,13 +10,13 @@ const Table = ({contacts}) => {
     }
 
     const searchCB = (contact) => {
-        contact.name.includes(searchTerm) || contact.email.includes(searchTerm)
+        contact.name.includes(searchTerm) || contact.email.includes(searchTerm);
     }
 
     let filteredContacts = [];
-    
+
     if(filter === "All"){
-        filteredContacts = searchTerm? searchCB(contacts) : contacts;
+        filteredContacts = searchTerm ? contacts.filter(searchCB) : contacts;
     }else{
         filteredContacts = contacts.filter((contact)=> contact.group === filter && searchCB(contact));
     }
