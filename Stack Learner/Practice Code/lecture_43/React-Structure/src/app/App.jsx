@@ -1,15 +1,19 @@
-import InputGroups from "../components/shared/forms/InputGroups";
-import Button from "../components/ui/buttons/Button";
-import TextInput from "../components/ui/inputs/TextInput";
-import Text from "../components/ui/texts/Text";
+import useForm from "../hooks/useForm";
 
 const App = () => {
-    return(
+    const{formState} = useForm({
+        init:{
+            name: 'Mohammad Anwarul',
+            email: 'mdanwarul@gmail.com',
+            password: 'anwarul123',
+        }
+    });
+
+    // console.log(formState);
+
+    return (
         <div>
             <h1>App</h1>
-            <div>
-                <InputGroups name='title' placeholder='Enter the title' label='Title' error='Something went wrong'/>
-            </div>
         </div>
     )
 }

@@ -3,7 +3,7 @@ import TextInput from "../../ui/inputs/TextInput"
 import Label from "../../ui/inputs/Label";
 
 const Container = styled.div`
-    width: 90%;
+    width: 94.5%;
     padding: 1rem;
     border: 1px solid #e1e1e1;
     display: flex;
@@ -21,7 +21,7 @@ export const InputGroups = ({label, name, value, placeholder, error, onChange, o
   return (
     <Container>
         <Label htmlFor = {name}>{label}</Label>
-        <TextInput name={name} id={name} placeholder={placeholder}/>
+        <TextInput name={name} id={name} placeholder={placeholder} value={value} onChange={onChange} onFocus={onFocus} onBlur={onBlur} error={error}/>
         {error && <ErrorMessage>{error}</ErrorMessage>}
     </Container>
   )
