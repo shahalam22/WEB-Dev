@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { isObjEmpty, deepClone } from "../utils/object-utils";
 
 /**
  * @typedef {Object} Param
@@ -14,13 +15,19 @@ const useForm = ({init, validate}) => {
     const [state, setState] = useState(mapValuesToState(init));
 
     const handleChange = (e) => {
-        const {name: key, value} = e.target;
+        const {name: key, value, type, checked} = e.target;
 
         const oldState = deepClone(state);
-        oldState[key].value = value;
+
+        if(type === 'checkbox'){
+            oldState[key].value = checked;
+        }else{
+            oldState[key].value = value;
+        }
+
+        // oldState[key].value = value;
         
-        const values = mapStateToValues(oldState);
-        const {errors} = checkValidity(values);
+        const { errors } = getErrors();
 
         if(oldState[key].touched && errors[key]){
             oldState[key].error = errors[key];
@@ -56,8 +63,7 @@ const useForm = ({init, validate}) => {
     const handleBlur = (e) => {
         const key = e.target.name;
 
-        const values = mapStateToValues(state);
-        const {errors} = checkValidity(values);
+        const { errors } = getErrors();
 
         const oldState = deepClone(state);
 
@@ -72,16 +78,18 @@ const useForm = ({init, validate}) => {
         setState(oldState);
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e, cb) => {
         e.preventDefault();
-
-        // const values = mapStateToValues(state);
-        // const {errors, isValid} = checkValidity(values);
-
+        const {hasError, errors, values} =  getErrors();
+        cb({
+            hasError,
+            errors,
+            values,
+            touched: mapStateToKeys(state, 'touched'),
+            focused: mapStateToKeys(state, 'focused'),
+        })
         
-
-        
-        if(isValid){
+        if(!hasError){
             console.log(state);
         }else{
             const oldState = deepClone(state);
@@ -93,21 +101,51 @@ const useForm = ({init, validate}) => {
         }
     }
 
+    const clear = () => {
+        const newState = mapValuesToState(init, true);
+        setState(newState);
+    }
+
+    const getErrors = () => {
+        let hasError = null, errors = null;
+
+        const values = mapStateToKeys(state, 'value');
+
+        if(typeof validate === 'boolean'){
+            hasError = validate;
+            errors = mapStateToKeys(state, 'error');
+        }else if(typeof validate === 'function'){
+            const errorsFromCB = validate(values);
+            hasError = !isObjEmpty(errorsFromCB);
+            errors = errorsFromCB
+        }else{
+            throw new Error('validate must be a boolean or a function');
+        }
+
+        return {
+            values,
+            errors,
+            hasError,
+        }
+    }
+
     return {
         formState: state,
         handleChange,
         handleFocused,
         handleBlur,
+        handleSubmit,
+        clear,
     };
 };
 
 export default useForm;
 
 // Helper Functions
-const mapValuesToState = (values) => {
+const mapValuesToState = (values, shouldClear = false) => {
     return Object.keys(values).reduce((acc, key)=>{
         acc[key] ={
-            value: values[key],
+            value: shouldClear ? '' : values[key],
             error: '',
             focused: false,
             touched: false,
@@ -116,9 +154,9 @@ const mapValuesToState = (values) => {
     }, {})
 }
 
-const mapStateToValues = (state) => {
-    return Object.keys(state).reduce((acc, key)=>{
-        acc[key] = state[key].value;
+const mapStateToKeys = (state, key) => {
+    return Object.keys(state).reduce((acc, cur)=>{
+        acc[cur] = state[cur][key];
         return acc;
     }, {});
 };
