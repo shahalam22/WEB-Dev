@@ -10,13 +10,15 @@ const App = () => {
     //     );
     // }, [])
 
+    // console.log(import.meta.env);
+
     const {getPlaylistById, playlists} = usePlaylists();
 
     useEffect(() => {
         getPlaylistById('PL_XxuZqN0xVD0op-QDEgyXFA4fRPChvkl');
     }, [])
 
-    console.log(playlists);
+    // console.log(playlists);
 
     return (
         <div>
