@@ -37,15 +37,18 @@ const App = () => {
             <Container maxWidth={'lg'} sx={{marginTop: 16}}>
                 <Navbar getPlaylistById={getPlaylistById}/>
                 {playlistArray.length > 0 && (
-                    <Stack direction={'row'} spacing={2}>
-                            {playlistArray.map((item) => (
-                            <PlaylistCardItem 
-                                key={item.id} 
-                                playlistThumbnail={item.playlistThumbnail} 
-                                playlistTitle={item.playlistTitle} 
-                                channelTitle={item.channelTitle}
-                            />))}
-                    </Stack>
+                    <Grid container alignItems="stretch">
+                        {playlistArray.map((item) => (
+                            <Grid item xs={12} md={6} lg={4} mb={2}>
+                                <PlaylistCardItem 
+                                    key={item.id} 
+                                    playlistThumbnail={item.playlistThumbnail} 
+                                    playlistTitle={item.playlistTitle} 
+                                    channelTitle={item.channelTitle}
+                                />
+                            </Grid>
+                        ))}
+                    </Grid>
                 )}
             </Container>
         </>
