@@ -18,55 +18,35 @@ const usePlaylists = () => {
 
         setLoading(true);
 
-        let result = [];
-
         try {
-            result = await getPlayList(playlistId);
+            const playlist = await getPlayList(playlistId);
             setError('');
+            setState((prev) => ({
+                ...prev,
+                playlists: {
+                    ...prev.playlists,
+                    [playlistId]: playlist,
+                },
+            }));
         }catch (e) {
             setError(e.response?.data?.error?.message || 'Something went wrong');
         }finally {
             setLoading(false);
         }
 
-        let cId, cTitle;
-
-        result = result.map(item => {
-            const { channelId, title, description, thumbnails: {medium}, channelTitle, } = item.snippet
-            
-            if(!cId) cId = channelId;
-            if(!cTitle) cTitle = channelTitle;
-            
-            return {
-                title, description, thumbnail: medium, contentDetails: item.contentDetails,
-            }
-        })
-
-        setState(prev =>({
-            ...prev,
-            playlists: {
-                ...prev.playlists,
-                [playlistId]: {
-                    items: result,
-                    playlistId: playlistId,
-                    channelId: cId,
-                    channelTitle: cTitle,
-                },
-            }
-        }))
     }
 
     const addToFavorites = (playlistId) => {
         setState(prev => ({
             ...prev,
-            favoritePlaylists: [...prev.favoritePlaylists, playlistId]
+            favoritePlaylists: [...prev, playlistId]
         }))
     }
     
     const addToRecent = (playlistId) => {
         setState(prev => ({
             ...prev,
-            recentPlaylists: [...prev.recentPlaylists, playlistId]
+            recentPlaylists: [...prev, playlistId]
         }))
     }
 
