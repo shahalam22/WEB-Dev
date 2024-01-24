@@ -3,7 +3,7 @@ import * as React from 'react';
 import Navbar from './components/navbar/index';
 import usePlaylists from './hooks/usePlaylists';
 import PlaylistCardItem from './components/playlist-card-item';
-import { CssBaseline, Container, Stack } from '@mui/material';
+import { CssBaseline, Container, Stack, Grid } from '@mui/material';
 
 
 

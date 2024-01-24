@@ -4,7 +4,7 @@ import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Typography from '@mui/material/Typography';
-import { Button, Stack } from '@mui/material';
+import { Button, Stack, Box } from '@mui/material';
 import { PlayCircleOutline } from '@mui/icons-material';
 
 
@@ -25,10 +25,11 @@ const PlaylistCardItem = ({playlistThumbnail, playlistTitle, channelTitle}) => {
           {channelTitle}
         </Typography>
       </CardContent>
+      <Box sx={{flexGrow: 1}}></Box>
       <CardActions disableSpacing>
         <Button>
             <Stack direction={"row"} spacing={1} alignItems={600}>
-                <PlayCircleOutlined/>
+                <PlayCircleOutline/>
                 <Typography variant="body2" fontWeight={600}>
                     Start Tutorial
                 </Typography>
