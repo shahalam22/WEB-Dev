@@ -1,0 +1,10 @@
+Tasks
+- Functionalities
+    - Show the alert to enter a playlist id
+    - Check if the id already in cache
+    - Fetch the YouTube API and make a cache for the results
+    - Add Refresh Button to refresh the cache
+- Component Tree
+- API Integration
+- Make The UI
+- Add The Functionalities
