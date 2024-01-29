@@ -1,48 +1,42 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-import './App.css'
-import Count from './components/Count'
-import DecrementBtn from './components/DecrementBtn';
-import History from './components/History';
-import IncrementBtn from './components/IncrementBtn';
-// import IncrementBtn from './components/IncrementBtn'
-// import DecrementBtn from './components/DecrementBtn'
-// import History from './components/History'
+import { Input } from '@mui/material'
+import { useForm, Controller } from 'react-hook-form'
 
-
-// // using raw REDUX
-// function App() {
-//   const [count, setCount] = useState(0)
-
-//   return (
-//     <div className="App">
-//       <Count/>
-//       <div>
-//         <IncrementBtn />
-//         <DecrementBtn />
-//       </div>
-//       <History />
-//     </div>
-//   )
-// }
-
-// export default App
-
-
-// using EASY-PEASY
-function App() {
-
-  return (
-    <div className="App">
-      <Count/>
-      <div>
-        <IncrementBtn/>
-        <DecrementBtn/>
-      </div>
-      <History/>
+const InputText = ({name, label, ...props}) => (
+    <div>
+        <label htmlFor={name}>{label} : </label>
+        <input type="text" id={name} {...props}/>
     </div>
-  )
+                
+)
+
+const App = () => {
+    const { handleSubmit, formState: { errors, touchedFields }, reset, control } = useForm({reValidateMode: 'onSubmit', defaultValues: {
+        name: 'John Doe',
+        email: 'john.doe@email.com',
+        age: 0,
+    }})
+
+    const onValid = (data, obj) => {
+        console.log(data);
+        console.log('OBJ: ', obj);
+        reset();
+    }
+
+    const onInvalid = (data) => {
+        console.log('Invalid', data);
+    }
+
+    return (
+        <div>
+            <h1>Hello World</h1>
+            <form onSubmit={handleSubmit(onValid, onInvalid)}>
+                <Controller name='name' control={control} render={({field}) => <Input {...field}/> }/>
+                <Controller name='email' control={control} render={({field}) => <Input {...field}/> }/>
+                <Controller name='age' control={control} render={({field}) => <Input {...field}/> }/>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    )
 }
 
 export default App;
