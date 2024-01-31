@@ -6,15 +6,26 @@ import PlaylistCardItem from './components/playlist-card-item';
 import { CssBaseline, Container, Stack, Grid } from '@mui/material';
 import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom';
 import { Typography } from '@mui/material';
+import { useStoreActions } from 'easy-peasy';
+import { useEffect } from 'react';
 
+// playlist id : PL_XxuZqN0xVD0op-QDEgyXFA4fRPChvkl
+
+const playlistID = 'PL_XxuZqN0xVD0op-QDEgyXFA4fRPChvkl';
 
 const HomePage = ({ playlistArray }) => {
+    const playlist = useStoreActions((actions) => actions.playlist);
+
+    useEffect(()=> {
+        playlist.getPlaylistData(playlistID);
+    }, [])
+
     return (
         <Container maxWidth={'lg'} sx={{my: 16}}>
             {playlistArray.length > 0 && (
                 <Grid container alignItems="stretch">
                     {playlistArray.map((item) => (
-                        <Grid item xs={12} md={6} lg={4} mb={2}>
+                        <Grid key={item.playlistId} item xs={12} md={6} lg={4} mb={2}>
                             <PlaylistCardItem 
                                 key={item.playlistId} 
                                 playlistId={item.playlistId}
