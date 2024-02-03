@@ -1,6 +1,6 @@
 import * as React from 'react';
 import YouTube from 'react-youtube';
-import { CssBaseline, Container, Stack, Grid, Card, CardMedia, CardContent, List, ListItem, ListItemButton, ListItemAvatar, Avatar, ListItemText, Button, TextField} from '@mui/material';
+import { Container, Stack, List, ListItem, ListItemButton, ListItemAvatar, Avatar, ListItemText, Button, TextField} from '@mui/material';
 import { useParams } from 'react-router-dom';
 import { Typography } from '@mui/material';
 import { useStoreActions, useStoreState } from 'easy-peasy';
