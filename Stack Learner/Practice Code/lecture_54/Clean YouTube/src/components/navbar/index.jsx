@@ -10,7 +10,7 @@ import { useState } from 'react';
 import PlaylistForm from '../playlist-form/index';
 
 
-const Navbar = ({ getPlaylistById }) => {
+const Navbar = () => {
 
   const [open, setOpen] = useState(false);
 
@@ -22,29 +22,29 @@ const Navbar = ({ getPlaylistById }) => {
     setOpen(false);
   };
 
-  const getPlaylistId = (id) => {
-    getPlaylistById(id);
-  }
+  // const getPlaylistId = (id) => {
+  //   getPlaylistById(id);
+  // }
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" color="default" sx={{py: 2}}>
+    <Box sx={{ flexGrow: 1}}>
+      <AppBar position="static" color="default" sx={{py: 2, backgroundColor:'black'}}>
         <Container maxWidth={'lg'}>
           <Toolbar>
             <Stack sx={{flexGrow: 1}}>
-              <Link to='/' component={RouterLink} sx={{textDecoration:'none', color:'black'}}>
-                <Typography variant="h4">
-                  Clean YouTube
+              <Link to='/' component={RouterLink} sx={{textDecoration:'none'}}>
+                <Typography variant="h4" color={'white'}>
+                  <b>CleanTube</b>
                 </Typography>
               </Link>
-              <Link href='https://stacklearner.com' target={'_blank'} sx={{textDecoration:'none', color:'black'}}>
-                <Typography variant="body1">
-                  By Stack Learner
+              <Link to='/' component={RouterLink} sx={{textDecoration:'none'}}>
+                <Typography variant="body1" color={'white'}>
+                  Boost your Concentration
                 </Typography>
               </Link>
             </Stack>
-            <Button variant='contained' onClick={handleClickOpen}>Add Playlist</Button>
-            <PlaylistForm open={open} handleClose={handleClose} getPlaylistId={getPlaylistId}/>
+            <Button variant='contained' color='error' onClick={handleClickOpen}>Add Playlist</Button>
+            <PlaylistForm open={open} handleClose={handleClose}/>
           </Toolbar>
         </Container>
       </AppBar>

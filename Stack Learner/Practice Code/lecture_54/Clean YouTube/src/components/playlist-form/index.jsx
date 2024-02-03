@@ -7,37 +7,35 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import { useState } from 'react';
+import {useStoreActions} from 'easy-peasy'
 
-const PlaylistForm = ({open, handleClose, getPlaylistId}) => {
-
+const PlaylistForm = ({open, handleClose}) => {
     const [state, setState] = useState('');
+    const playlistActions = useStoreActions((actions) => actions.playlist);
+    const recentActions = useStoreActions((actions) => actions.recent);
 
+// handler function
     const handleSubmit = (e) => {
-        // TODO: handle url and id differently later
         if(!state){
             alert('Invalid State');
         } else {
-            getPlaylistId(state);
+            if(state.indexOf('playlist?list=') !== -1){
+              playlistActions.getPlaylist(state.split('playlist?list=')[1].split('&')[0]);
+              recentActions.addToRecent(state.split('playlist?list=')[1].split('&')[0]);
+            }else{
+              playlistActions.getPlaylist(state);
+              recentActions.addToRecent(state);
+            }
             setState('');
             handleClose();
         }
     }
+//
 
   return (
     <Dialog
         open={open}
         onClose={handleClose}
-        // PaperProps={{
-        //   component: 'form',
-        //   onSubmit: (event) => {
-        //     event.preventDefault();
-        //     const formData = new FormData(event.currentTarget);
-        //     const formJson = Object.fromEntries(formData.entries());
-        //     const email = formJson.email;
-        //     console.log(email);
-        //     handleClose();
-        //   },
-        // }}
       >
         <DialogTitle>Add Playlist</DialogTitle>
         <DialogContent>
@@ -56,8 +54,8 @@ const PlaylistForm = ({open, handleClose, getPlaylistId}) => {
           />
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>Cancel</Button>
-          <Button onClick={handleSubmit}>Add PlayList</Button>
+          <Button  onClick={handleClose}>Cancel</Button>
+          <Button  onClick={handleSubmit}>Add PlayList</Button>
         </DialogActions>
     </Dialog>
   );

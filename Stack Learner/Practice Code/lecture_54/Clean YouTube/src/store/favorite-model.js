@@ -1,9 +1,14 @@
-import { action, persist } from 'easy-peasy'
+import { action, persist, thunk } from 'easy-peasy'
 
 const favoriteModel = persist({
     items: [],
-    addToFavorites: action((state, playListId) => {
-        state.items.push(playListId);
+    addToFavorites: thunk(({removeFromFavorites}, playlistId, {getState}) => {
+        if(getState().items.includes(playlistId)){
+            removeFromFavorites(playlistId);
+            return;
+        } else {
+            getState().items.push(playlistId);
+        }
     }),
     removeFromFavorites: action((state, playlistId) => {
         state.items = state.items.filter((id) => id !== playlistId)
