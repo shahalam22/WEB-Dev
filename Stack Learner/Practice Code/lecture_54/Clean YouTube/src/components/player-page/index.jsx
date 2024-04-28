@@ -44,7 +44,8 @@ const PlayerPage = ({playlists}) => {
     return (
         <Container maxWidth={'lg'} sx={{py: 10, backgroundColor:'#333333', color:'white'}}>
             <Container maxWidth={'lg'} sx={{alignContent: 'center'}}>
-                <YouTube videoId={videoId} opts={{height: '380px', width: '100%'}}/>
+                {/* <YouTube videoId={videoId} opts={{height: '380px', width: '100%'}}/> */}
+                <iframe width={'100%'} height={'400px'} style={{border: '0px'}} loading='lazy' src={`https://www.youtube.com/embed/${videoId}`} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
                 <Stack direction={'row'} justifyContent={'space-between'}>
                     <Button variant='contained' color='error' to={`/player/${playlistId}/${prevVideoId}`} component={Link}>Previous</Button>
                     <Button variant='contained' color='error' to={`/player/${playlistId}/${nextVideoId}`} component={Link}>Next</Button>
@@ -53,7 +54,7 @@ const PlayerPage = ({playlists}) => {
             <Container spacing={2} sx={{my: 5}}>
                 <Stack spacing={2} maxWidth={'100%'} justifyContent={'center'}>
                     <h2>Make Note</h2>
-                    <TextField id="note" margin='center' fullWidth multiline rows={6} defaultValue={state} inputProps={{style: {color: 'white'}}} onChange={handleChange}/>
+                    <TextField id="note" fullWidth multiline rows={6} defaultValue={state} inputProps={{style: {color: 'white'}}} onChange={handleChange}/>
                     <Button variant='contained' color='error' onClick={() => handleSave()}>Save</Button>
                 </Stack>
                 <Container>

@@ -1,0 +1,108 @@
+/*=========================================================
+                          Mixins
+=========================================================*/
+
+/**
+*
+*   Helpful reuseable function-like things that will be used to implement
+*   styles for components
+*
+*/
+
+// er use ta kothay?
+// like amra ekta media query use korte chai. [media query use kore amra screen-size onuzayi kono ekta design kemon hobe ta define korte pari]
+
+// example:
+// body {
+//     font-size: 12px;
+
+//     @media (min-width: 48rem) {
+//         font-size: 14px;
+//     }
+
+//     @media (min-width: 60rem) {
+//         font-size: 16px;
+//     }
+
+//     @media (min-width: 80rem) {
+//         font-size: 18px;
+//     }
+// }
+
+// emon code amader onek bar use kora lagbe, jeta onek hectic. Ei problem theke bachte amra mixins use korbo
+
+
+// uporer kaj tai mixin diye amra use korbo. dekhe beshi code kora lagbe mone hoileo. actually error khawar chance khub ei kom
+
+@mixin tablet {
+    @media (min-width: map-get($breakpoints, 'md')){
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media (min-width: map-get($breakpoints, 'lg')){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: map-get($breakpoints, 'xl')){
+        @content;
+    }
+}
+
+
+body {
+    font-size: 12px;
+
+    @include tablet {
+        font-size: 14px;
+    }
+
+    @include laptop {
+        font-size: 16px;
+    }
+
+    @include desktop {
+        font-size: 18px;
+    }
+}
+
+
+// // another direct way without mixin
+// body {
+//     font-size: 12px;
+
+//     @media (min-width: map-get($breakpoints, 'md')){
+//         font-size: 14px;
+//     }
+
+//     @media (min-width: map-get($breakpoints, 'lg')){
+//         font-size: 16px;
+//     }
+
+//     @media (min-width: map-get($breakpoints, 'xl')){
+//         font-size: 18px;
+//     }
+// }
+
+
+// mixin can take arguments
+
+@mixin padding($space){
+    padding: map-get($spacing, $space)
+}
+
+body {
+    @include padding("sm")
+}
+
+@mixin margin($space){
+    margin: map-get($spacing, $space)
+}
+
+@mixin shadow($key){
+    box-shadow: map-get($shadows, $key);
+}
+

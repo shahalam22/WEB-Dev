@@ -1,0 +1,20 @@
+{
+  "name": "@lecture_79/react",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^18.2.74",
+    "react": "^18.2.0",
+    "rollup": "^4.14.0",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "typescript": "^5.4.3"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev" : "yarn build --watch"
+  },
+  "dependencies": {
+    "@lecture_79/scss": "1.0.0"
+  }
+}

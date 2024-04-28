@@ -1,0 +1,8 @@
+// ei file e amra amader sool SCSS files ke include korbo [unify korbo arki]
+
+// include korar time e obosshoi sequentially import deya lagbe. Like _mixins.scss e bakider element use hoise tai bakigula must be er age import kora lagbe.
+
+@import './variables';
+@import './colors';
+@import './typography';
+@import './mixins';
